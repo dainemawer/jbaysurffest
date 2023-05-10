@@ -1,0 +1,9 @@
+{
+  "*.[tj]s": [
+    "npm run lint"
+  ],
+  "*.[tj]sx": [
+    "npm run lint"
+  ],
+  "*.css": "stylelint"
+}
