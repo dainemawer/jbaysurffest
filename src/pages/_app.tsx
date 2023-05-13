@@ -12,14 +12,15 @@ import type { AppProps, NextWebVitalsMetric } from 'next/app'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { DefaultSeo } from 'next-seo';
-import Layout from '@components/Layout'
-import ErrorBoundary from '@components/ErrorBoundary'
-import 'tailwindcss/tailwind.css'
 import { sendPageView } from '@lib/gtag'
 import { GoogleAnalytics, sendToAnalytics } from '@lib/gtag/analytics';
 import { SiteContext, store } from '@context/SiteContext';
+import Layout from '@components/Layout'
+import ErrorBoundary from '@components/ErrorBoundary'
 
 import SEO from '../next-seo.config';
+import 'tailwindcss/tailwind.css';
+import '../styles/globals.css';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter()

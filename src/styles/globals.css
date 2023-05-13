@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.page-title {
+		@apply text-4xl lg:text-7xl text-black text-center leading-tight uppercase font-extrabold mb-12;
+	}
+
+	.section-paragraph {
+		@apply lg:text-2xl text-xl font-medium text-center mt-9 leading-normal;
+	}
+
+	.page-container {
+		@apply container mx-auto max-w-full my-12;
+	}
+
+	.page-container p {
+		@apply lg:text-2xl mx-auto max-w-5xl text-xl font-medium text-center mt-9 leading-normal;
+	}
+
+	.page-hyperlink {
+		@apply font-semibold uppercase inline-block text-base md:text-2xl border-b-4 border-[#458185];
+	}
+
+	.terms-heading {
+		@apply text-xl lg:text-[32px] inline-block leading-none font-semibold uppercase bg-highlight my-8;
+	}
+
+	.navigation {
+		@apply bg-header bg-no-repeat w-full bg-cover bg-bottom pt-8 lg:pt-8 pb-14 text-white
+	}
+
+	.navigation-link {
+		@apply uppercase font-medium text-xl hover:bg-highlight-transparent cursor-pointer
+	}
+
+	.section-heading {
+		@apply text-3xl lg:text-[40px] inline-block leading-none font-semibold uppercase bg-highlight;
+	}
+
+	.footer {
+		@apply bg-wave bg-primary bg-no-repeat text-white pt-20 lg:pt-52 px-8 pb-6;
+	}
+
+	.colophon {
+		@apply border-t-2 pt-6 mt-16 flex flex-col lg:flex-row lg:items-center justify-between text-white border-white;
+	}
+}
+
+.border-color {
+
+	&:nth-child(1n+1) img {
+		border-color: #458185;
+	}
+
+	&:nth-child(2n+1) img {
+		border-color: #E78B5F;
+	}
+
+	&:nth-child(3n+1) img {
+		border-color: #E8C786;
+	}
+}
+
+footer {
+	background-size: contain;
+
+	@media (min-width: 1650px) {
+		background-size: cover;
+	}
+}
+
+.footer-navigation {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	@media (min-width: 768px) {
+		grid-gap: 1rem;
+		grid-template-columns: 133px 1fr 1fr 1fr 1fr;
+	}
+}
