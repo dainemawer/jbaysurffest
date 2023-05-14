@@ -18,12 +18,11 @@ export default function VIPFundraiser(): JSX.Element {
 			/>
 			<div className="page-container">
 				<h1 className="page-title">VIP Fundraiser</h1>
+				<Image loading="lazy" className="my-8 mx-auto" sizes="(min-width: 1200px) 70vw, (min-width: 768) 40vw, 100vw" src="/images/dinner.jpg" alt="A dinner table on the beach" width="1000" height="667" />
 
 				<p>Welcome to the exclusive VIP Fundraiser event at the Jbay Surf Festival! We are delighted to invite you to an unforgettable evening of surf, music, and philanthropy. As you soak in the vibrant atmosphere of the festival, your presence here holds special significance as it directly contributes to the Jbay Surf Foundation&pos;s mission of empowering the youth of Jeffreys Bay.</p>
 
 				<p>Join us for an evening filled with surf-inspired delights and entertainment, all in support of this remarkable organization. As a VIP guest, you will have access to an array of exclusive experiences that will make your night truly memorable. From premium seating to unparalleled views of the live surf competition, you will witness the world&pos;s best surfers carve the waves of Jeffreys Bay with their exceptional skills.</p>
-
-				<Image placeholder="blur" loading="lazy" className="my-8 mx-auto" sizes="(min-width: 1200px) 70vw, (min-width: 768) 40vw, 100vw" src="/images/dinner.jpg" alt="Surfboards in a line" width="1000" height="667" />
 
 				<p>Indulge in a delectable selection of gourmet cuisine and sip on handcrafted cocktails as you mingle with like-minded individuals who share a passion for both surfing and giving back to the community. Engage in lively conversations with renowned surfers, influential figures, and members of the Jbay Surf Foundation, all of whom have made a significant impact on the lives of aspiring young surfers.</p>
 

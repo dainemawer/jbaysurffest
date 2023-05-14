@@ -66,7 +66,7 @@ export const menus = [
 			{
 				id: 3,
 				title: 'Fishing',
-				link: '/acitivities/fishing',
+				link: '/activities/fishing',
 				type: 'internal'
 			},
 			{

@@ -11,6 +11,10 @@
 		@apply lg:text-2xl text-xl font-medium text-center mt-9 leading-normal;
 	}
 
+	.section-paragraph-left {
+		@apply lg:text-2xl text-xl font-medium text-left mt-9 mb-16 leading-normal;
+	}
+
 	.page-container {
 		@apply container mx-auto max-w-full my-12;
 	}
@@ -19,8 +23,17 @@
 		@apply lg:text-2xl mx-auto max-w-5xl text-xl font-medium text-center mt-9 leading-normal;
 	}
 
+	.page-container .page-paragraph {
+		@apply lg:text-2xl text-xl font-medium text-left mb-8 mt-0 leading-normal mx-0;
+	}
+
 	.page-hyperlink {
-		@apply font-semibold uppercase inline-block text-base md:text-2xl border-b-4 border-[#458185];
+		@apply font-semibold uppercase inline-block text-base md:text-2xl border-b-4 border-primary transition-colors;
+
+		&:hover,
+		&:focus {
+			@apply border-secondary
+		}
 	}
 
 	.terms-heading {
