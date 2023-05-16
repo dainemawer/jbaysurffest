@@ -17,7 +17,7 @@ export default function Header(): JSX.Element {
 		if (window !== undefined) {
 			let windowHeight = window.scrollY;
 			if(figure.current !== null) {
-				windowHeight > figure.current.clientHeight ? setStickyClass('fixed top-0 left-0 z-50') : setStickyClass('absolute is-sticky');
+				windowHeight > figure.current.clientHeight ? setStickyClass('fixed top-0 left-0 z-50 is-sticky') : setStickyClass('absolute');
 			}
 		}
 	};

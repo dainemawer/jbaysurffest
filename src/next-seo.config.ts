@@ -3,7 +3,7 @@ import { DefaultSeoProps } from 'next-seo';
 const SITE_TITLE = 'J-Bay Surf Festival';
 const SITE_DESCRIPTION = 'Welcome to the annual J-Bay Surf Festival 2023';
 const SITE_URL = 'https://jbaysurffest.co.za';
-const SITE_IMAGE = '/opengraph.jpg';
+const SITE_IMAGE = 'https://jbaysurffest.co.za/opengraph.jpg';
 
 
 const config: DefaultSeoProps = {
@@ -36,6 +36,11 @@ const config: DefaultSeoProps = {
 				alt: 'Illustrated ocean with a saxophone riding a surfboard and an Aloe plant on an island.',
 			},
 		],
+	},
+	twitter: {
+		handle: '@jbaysurffest',
+		site: '@jbaysurffest',
+		cardType: 'summary_large_image',
 	}
 };
 

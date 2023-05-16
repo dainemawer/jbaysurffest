@@ -60,7 +60,7 @@ export default function Home(): JSX.Element {
 				<p className="section-paragraph">
 					Attending the Jeffreys Bay Surf Festival is a must-do for any surfing enthusiast or lover of beach culture. Whether you&pos;re there to watch the world&pos;s best surfers compete, enjoy live music performances, or simply soak up the sun and enjoy the stunning coastal scenery, the festival offers something for everyone. Tickets can be purchased using the Airdosh QR code below
 				</p>
-				<p><a className="page-hyperlink" href="https://airdosh.co.za" target="_blank" rel="noreferrer">QR Code Not Working? Visit Airdosh</a></p>
+				<p className="text-center mt-16"><a className="page-hyperlink" href="https://airdosh.co.za" target="_blank" rel="noreferrer">QR Code Not Working? Visit Airdosh</a></p>
 			</Section>
 			<Section id="faq" label="Frequently asked questions about the Jbay Surf Festival" title="FAQ" rotate="-rotate-1 mb-8 lg:mb-16">
 				<Accordion faqs={faqs} />

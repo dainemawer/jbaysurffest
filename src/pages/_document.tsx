@@ -18,7 +18,7 @@ export default function Document(): JSX.Element {
 				<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
 				<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;600;800&display=swap" rel="stylesheet" />
 			</Head>
-			<body className="font-dosis bg-body bg-contain bg-local bg-no-repeat scroll-smooth">
+			<body className="font-dosis scroll-smooth">
 				<Main />
 				<NextScript />
 				<script

@@ -15,7 +15,7 @@ export default function Footer(): JSX.Element {
 		<footer className="footer" id="site-footer" role="contentinfo" aria-label="Site Footer">
 			<div className="container mx-auto max-w-7xl">
 				<div className="footer-navigation">
-					<Logo />
+					<Logo margin="mt-12 lg:mt-0" />
 					<Menus menus={menus} />
 				</div>
 				<Colophon />

@@ -20,11 +20,11 @@ const dosis = Dosis({
 
 export default function Layout({ children }): JSX.Element {
 	return (
-		<div className={`mx-auto max-w-[1920px] ${dosis.variable}`}>
+		<div className={`mx-auto relative max-w-[1920px] ${dosis.variable}`}>
 			<SkipLink />
 			<div id="top" />
 			<Header />
-			<main id="main-content" className="container mx-auto max-w-7xl px-8 2xl:px-0">{children}</main>
+			<main id="main-content" className="bg-body bg-contain bg-no-repeat container mx-auto max-w-7xl px-8 2xl:px-0">{children}</main>
 			<Footer />
 		</div>
 

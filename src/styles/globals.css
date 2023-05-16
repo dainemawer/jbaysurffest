@@ -41,7 +41,11 @@
 	}
 
 	.navigation {
-		@apply bg-header bg-no-repeat w-full bg-cover bg-bottom pt-8 lg:pt-8 pb-14 text-white
+		@apply bg-primary pt-8 pb-8 text-white transition-all duration-300 ease-in-out;
+	}
+
+	.is-sticky {
+		@apply shadow-xl pt-4 pb-4;
 	}
 
 	.navigation-link {
