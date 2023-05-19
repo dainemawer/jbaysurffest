@@ -43,8 +43,9 @@ export default function Home(): JSX.Element {
 				<div className="grid grid-cols-2 lg:grid-cols-6 gap-10">
 					{lineup && lineup.map((item, index) => {
 						return (
-							<div className="flex flex-col border-color items-center" key={`lineup-${item.id}`}>
-								<a className="[&>*]:hover:grayscale transition-all" href={item.link} target="_blank" rel="noreferrer"><Image className="border-8 rounded-full" src={item.image} alt={item.name} width={151} height={151} /></a>
+							<div className="flex flex-col border-color items-center w-40" key={`lineup-${item.id}`}>
+								<a className="[&>*]:hover:grayscale transition-all" href={item.link} target="_blank" rel="noreferrer">
+									<Image className="border-8 rounded-full h-40 w-40 object-cover" src={item.image} alt={item.name} width={151} height={151} /></a>
 								<h3 className="text-center text-lg lg:text-xl font-semibold uppercase mt-6">{item.name}</h3>
 							</div>
 						)

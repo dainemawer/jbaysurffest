@@ -18,7 +18,7 @@ export default function MountainBiking(): JSX.Element {
 			/>
 			<div className="page-container">
 				<h1 className="page-title">Mountain Biking</h1>
-				<Image loading="lazy" sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/mountain-biking.jpg" alt="Mountain bike on a hill at dusk" width="1000" height="667" />
+				<Image sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/mountain-biking.jpg" alt="Mountain bike on a hill at dusk" width="1000" height="667" />
 				<h2 className="text-lg lg:text-2xl text-black text-center leading-tight uppercase font-extrabold mb-12">Gear Up for the JBay Surf Festival Mountain Biking Event!</h2>
 
 				<p>Get ready for an adrenaline-fueled adventure at the JBay Surf Festival&apos;s exhilarating Mountain Biking Event! This exciting addition to the festival lineup offers mountain biking enthusiasts the perfect opportunity to experience the rugged beauty of Jeffreys Bay and its surrounding trails. Read on to discover more about the event, the trails, and how you can be a part of this thrilling mountain biking experience.</p>

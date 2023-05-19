@@ -18,7 +18,7 @@ export default function Fishing(): JSX.Element {
 			/>
 			<div className="page-container">
 				<h1 className="page-title">Fishing</h1>
-				<Image loading="lazy" sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/fishing.jpg" alt="A fisherman casting a line into a river" width="1000" height="667" />
+				<Image sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/fishing-jbay.jpg" alt="A fisherman casting a line into a river" width="1000" height="667" />
 				<h2 className="text-lg lg:text-2xl text-black text-center leading-tight uppercase font-extrabold mb-12">Cast Your Line at the JBay Surf Festival Fishing Event!</h2>
 
 				<p>Join us for a thrilling fishing experience amidst the picturesque coastal beauty of Jeffreys Bay at the JBay Surf Festival Fishing Event! Whether you&apos;re a seasoned angler or just starting out, this event offers a fantastic opportunity to showcase your fishing skills, enjoy the tranquil surroundings, and compete for exciting prizes. Read on to learn more about the Fishing Event, the fishing zones, and how you can be part of this exciting angling adventure.</p>

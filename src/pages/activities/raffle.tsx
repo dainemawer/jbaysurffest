@@ -18,7 +18,7 @@ export default function Raffle(): JSX.Element {
 			/>
 			<div className="page-container">
 				<h1 className="page-title">Raffle</h1>
-				<Image loading="lazy" sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/raffle.jpg" alt="Girl holding raffle tickets" width="1000" height="667" />
+				<Image sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/raffle.jpg" alt="Girl holding raffle tickets" width="1000" height="667" />
 				<h2 className="text-lg lg:text-2xl text-black text-center leading-tight uppercase font-extrabold mb-12">Enter the JBay Surf Festival Raffle for a Chance to Win Amazing Prizes!</h2>
 
 				<p>Welcome to the JBay Surf Festival Raffle! We are thrilled to offer you the opportunity to participate in an exciting raffle that adds even more excitement to your festival experience. By participating, you not only stand a chance to win fantastic prizes but also contribute to the festival&apos;s success and support its future endeavors. Read on to learn more about the raffle, how to enter, and the incredible prizes that await lucky winners.</p>

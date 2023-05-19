@@ -41,11 +41,11 @@
 	}
 
 	.navigation {
-		@apply bg-primary pt-8 pb-8 text-white transition-all duration-300 ease-in-out;
+		@apply bg-primary flex items-center h-[104px] text-white transition-all duration-300 ease-in-out;
 	}
 
 	.is-sticky {
-		@apply shadow-xl pt-4 pb-4;
+		@apply shadow-xl h-16;
 	}
 
 	.navigation-link {

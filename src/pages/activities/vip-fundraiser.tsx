@@ -18,7 +18,7 @@ export default function VIPFundraiser(): JSX.Element {
 			/>
 			<div className="page-container">
 				<h1 className="page-title">VIP Fundraiser</h1>
-				<Image loading="lazy" className="my-8 mx-auto" sizes="(min-width: 1200px) 70vw, (min-width: 768) 40vw, 100vw" src="/images/dinner.jpg" alt="A dinner table on the beach" width="1000" height="667" />
+				<Image className="my-8 mx-auto" sizes="(min-width: 1200px) 70vw, (min-width: 768) 40vw, 100vw" src="/images/fundraiser.jpg" alt="A dinner table on the beach" width="1000" height="667" />
 
 				<p>Welcome to the exclusive VIP Fundraiser event at the Jbay Surf Festival! We are delighted to invite you to an unforgettable evening of surf, music, and philanthropy. As you soak in the vibrant atmosphere of the festival, your presence here holds special significance as it directly contributes to the Jbay Surf Foundation&pos;s mission of empowering the youth of Jeffreys Bay.</p>
 

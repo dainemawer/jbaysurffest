@@ -18,7 +18,7 @@ export default function Foundation(): JSX.Element {
 			/>
 			<div className="page-container">
 				<h1 className="page-title">Foundation</h1>
-				<Image loading="lazy" sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/surfboards.jpg" alt="Surfboards in a line" width="1000" height="667" />
+				<Image sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/surfboards.jpg" alt="Surfboards in a line" width="1000" height="667" />
 
 				<p>The Jbay Surf Foundation is a non-profit organization dedicated to empowering the youth of Jeffreys Bay through the transformative power of surfing. With a mission to provide opportunities, mentorship, and education to underprivileged children in the local community, the foundation plays a vital role in nurturing talent, building confidence, and instilling a love for the ocean.</p>
 

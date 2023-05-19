@@ -18,7 +18,7 @@ export default function JuiJitsu(): JSX.Element {
 			/>
 			<div className="page-container">
 				<h1 className="page-title">Jiu Jitsu</h1>
-				<Image loading="lazy" sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/jiu-jitsu.jpg" alt="Martial artists rolling on a mat." width="1000" height="667" />
+				<Image sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/jiu-jitsu.jpg" alt="Martial artists rolling on a mat." width="1000" height="667" />
 				<h2 className="text-lg lg:text-2xl text-black text-center leading-tight uppercase font-extrabold mb-12">Step onto the Mats: JBay Surf Festival Jiu-Jitsu Event</h2>
 
 				<p>Prepare to witness the art of grappling and ground fighting at the JBay Surf Festival&apos;s highly anticipated Jiu-Jitsu Event! This dynamic and technical martial art brings together skilled practitioners from near and far to showcase their expertise, strength, and strategy. Read on to learn more about the Jiu-Jitsu Event, its significance, and how you can be a part of this thrilling display of skill and technique.</p>
