@@ -38,14 +38,14 @@ export const lineup = [
 	{
 		id: 6,
 		name: 'Ettiene Buys',
-		image: '',
-		link: 'https://www.reverbnation.com/etiennebuys'
+		image: '/artists/etienne-buys.jpg',
+		link: 'https://www.instagram.com/ettienebuys'
 	},
 	{
 		id: 7,
 		name: 'Detroit',
-		image: '',
-		link: 'https://www.facebook.com/sunxaexperiment/'
+		image: '/artists/chad-detroit.jpg',
+		link: 'https://www.instagram.com/chaddutoit'
 	},
 	{
 		id: 8,
@@ -56,14 +56,14 @@ export const lineup = [
 	{
 		id: 9,
 		name: 'Trist',
-		image: '',
-		link: 'https://www.facebook.com/sunxaexperiment/'
+		image: '/artists/trist.jpg',
+		link: 'https://trist-epk.my.canva.site/'
 	},
 	{
 		id: 10,
-		name: 'Aiden',
-		image: '',
-		link: 'https://www.facebook.com/sunxaexperiment/'
+		name: 'Aiden Caye',
+		image: '/artists/aidin-caye.jpg',
+		link: 'https://aidincaye.com/'
 	},
 	{
 		id: 11,
@@ -78,27 +78,9 @@ export const lineup = [
 		link: 'https://soundcloud.com/jakewhitedisco'
 	},
 	{
-		id: 13,
-		name: 'Float',
-		image: '',
-		link: 'https://www.facebook.com/sunxaexperiment/'
-	},
-	{
 		id: 14,
 		name: 'Muzi',
 		image: '/artists/muzi.jpeg',
 		link: 'https://www.instagram.com/mvziou'
 	},
-	{
-		id: 15,
-		name: 'Loyiso',
-		image: '/artists/loyiso-gola.jpeg',
-		link: 'https://www.instagram.com/loyisogola'
-	},
-	{
-		id: 16,
-		name: 'Rob Van Vuuren',
-		image: '/artists/rob-van-vuuren.jpeg',
-		link: 'https://www.bigtime-entertainment.co.za/entertainer/rob-van-vuuren-ct'
-	}
 ]
