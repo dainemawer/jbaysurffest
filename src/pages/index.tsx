@@ -67,7 +67,7 @@ export default function Home(): JSX.Element {
 				<Accordion faqs={faqs} />
 			</Section>
 			<Section id="sponsors" label="Our Sponsors" title="Sponsors" rotate="rotate-1 mb-8 lg:mb-16 mt-6">
-				<div className="grid grid-cols-2 md:grid-cols-6">
+				<div className="grid grid-cols-2 md:grid-cols-4">
 					{sponsors && sponsors.map((item) => {
 						return (
 							<div key={`sponsor-${item.id}`}>

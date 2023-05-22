@@ -1,9 +1,9 @@
 export const sponsors = [
 	{
 		id: 0,
-		name: 'Vissla',
-		image: '/sponsors/vissla-logo.png',
-		link: 'https://www.vissla.com/',
+		name: 'The Store',
+		image: '/sponsors/thestore-logo.png',
+		link: 'https://www.thestorestuff.co.za/',
 		type: 'external'
 	},
 	{
@@ -15,16 +15,9 @@ export const sponsors = [
 	},
 	{
 		id: 2,
-		name: 'Sealand',
-		image: '/sponsors/sealand-logo.png',
-		link: 'https://www.sealandgear.com/',
-		type: 'external'
-	},
-	{
-		id: 3,
-		name: 'Corona',
-		image: '/sponsors/corona-logo.png',
-		link: 'https://www.corona.com/',
+		name: 'Kouga Municipality',
+		image: '/sponsors/kouga-logo.png',
+		link: 'https://www.kouga.gov.za/',
 		type: 'external'
 	},
 	{
@@ -32,13 +25,6 @@ export const sponsors = [
 		name: 'Sneaker Lab',
 		image: '/sponsors/sneakerlab-logo.png',
 		link: 'https://sneakerlab.com/',
-		type: 'external'
-	},
-	{
-		id: 5,
-		name: 'Stance',
-		image: '/sponsors/stance-logo.png',
-		link: 'https://www.stance.com/',
 		type: 'external'
 	}
 ]
