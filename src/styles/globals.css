@@ -63,6 +63,10 @@
 	.colophon {
 		@apply border-t-2 pt-6 mt-16 flex flex-col lg:flex-row lg:items-center justify-between text-white border-white;
 	}
+
+	.airdosh {
+		@apply flex my-16 max-w-lg mx-auto items-center rounded-3xl bg-airdosh p-4;
+	}
 }
 
 .border-color {

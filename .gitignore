@@ -105,3 +105,6 @@ dist
 
 # Env
 .env.local
+
+# Mac
+.DS_Store
