@@ -21,7 +21,7 @@ export default function Raffle(): JSX.Element {
 				<Image sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/raffle-poster.jpg" alt="Girl holding raffle tickets" width="1000" height="667" />
 				<h2 className="text-lg lg:text-2xl text-black text-center leading-tight uppercase font-extrabold mb-12">Enter the JBay Surf Festival Raffle for a Chance to Win Amazing Prizes!</h2>
 
-				<p>Welcome to the JBay Surf Festival Raffle! We are thrilled to offer you the opportunity to participate in an exciting raffle that adds even more excitement to your festival experience. By participating, you not only stand a chance to win fantastic prizes but also contribute to the festival&apos;s success and support its future endeavors. Read on to learn more about the raffle, how to enter, and the incredible prizes that await lucky winners.</p>
+				<p>Stand the chance to win some great prizes through supporting the J-Bay Surf Festivals NGO Raffle! Proceeds from this raffle go to the J-Bay Surfing Foundation, which funds various projects in and around J-Bay. The foundation is dedicated to making a positive impact on the community while promoting a love of surfing and ocean conservation. By purchasing a raffle ticket, you not only help support these efforts but also have a chance to win some amazing prizes. Don&apos;t miss your chance to give back and possibly win big with the J-Bay Surf Festivals NGO Raffle!</p>
 
 				<h3 className="terms-heading">How to Enter:</h3>
 

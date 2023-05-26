@@ -21,7 +21,7 @@ export default function JuiJitsu(): JSX.Element {
 				<Image sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/juijitsu.jpg" alt="Martial artists rolling on a mat." width="1000" height="667" />
 				<h2 className="text-lg lg:text-2xl text-black text-center leading-tight uppercase font-extrabold mb-12">Step onto the Mats: JBay Surf Festival Jiu-Jitsu Event</h2>
 
-				<p>Prepare to witness the art of grappling and ground fighting at the JBay Surf Festival&apos;s highly anticipated Jiu-Jitsu Event! This dynamic and technical martial art brings together skilled practitioners from near and far to showcase their expertise, strength, and strategy. Read on to learn more about the Jiu-Jitsu Event, its significance, and how you can be a part of this thrilling display of skill and technique.</p>
+				<p>Are you ready for the ADCC Jiu Jitsu Event happening in Jeffreys Bay this July? This event is highly anticipated, as it brings together the top Jiu-Jitsu athletes from around the world to compete in a no-gi format. Jeffreys Bay is a beautiful coastal town, making it the perfect location for a weekend of high-level grappling and enjoyable experiences. Join us for this event that highlights the best of Jiu Jitsu - you won&apos;t want to miss it!</p>
 
 				<h3 className="terms-heading">Event Details:</h3>
 

@@ -21,7 +21,7 @@ export default function Funduro(): JSX.Element {
 				<Image sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/funduro-jbay.jpg" alt="Motocross bike skidding through dirt" width="1000" height="667" />
 				<h2 className="text-lg lg:text-2xl text-black text-center leading-tight uppercase font-extrabold mb-12">Rev Up for the JBay Surf Festival Funduro Event!</h2>
 
-				<p>Get ready to kick up some dirt and conquer thrilling off-road trails at the JBay Surf Festival&apos;s action-packed Funduro Event! This exhilarating motorbike adventure is designed for riders of all skill levels who are ready to embrace the thrill of off-road riding. Read on to discover more about the Funduro Event, the trails, and how you can be part of this high-octane experience.</p>
+				<p>The J-Bay Surf Festivals Funduro event promises to be an adrenaline pumping experience for off road enthusiasts. Get ready to tackle the rugged terrain of the Eastern Cape and put your skills to the test in this high-octane adventure. With a variety of challenging obstacles and spectacular views, this event isn&apos;t to be missed. So come and join us as we celebrate the unique fusion of surf and motocross culture in the heart of J-Bay.</p>
 
 				<h3 className="terms-heading">Event Details:</h3>
 

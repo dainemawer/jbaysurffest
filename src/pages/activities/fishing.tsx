@@ -19,17 +19,15 @@ export default function Fishing(): JSX.Element {
 			<div className="page-container">
 				<h1 className="page-title">Fishing</h1>
 				<Image sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/fishing-jbay.jpg" alt="A fisherman casting a line into a river" width="1000" height="667" />
-				<h2 className="text-lg lg:text-2xl text-black text-center leading-tight uppercase font-extrabold mb-12">Cast Your Line at the JBay Surf Festival Fishing Event!</h2>
+				<h2 className="text-lg lg:text-2xl text-black text-center leading-tight uppercase font-extrabold mb-12">Welcome to the Skins Fishing Competition in Jeffreys Bay!</h2>
 
-				<p>Join us for a thrilling fishing experience amidst the picturesque coastal beauty of Jeffreys Bay at the JBay Surf Festival Fishing Event! Whether you&apos;re a seasoned angler or just starting out, this event offers a fantastic opportunity to showcase your fishing skills, enjoy the tranquil surroundings, and compete for exciting prizes. Read on to learn more about the Fishing Event, the fishing zones, and how you can be part of this exciting angling adventure.</p>
+				<p>This exciting annual event brings together fishing enthusiasts from all over to celebrate the art of fishing and promote sustainable practices such as catch and release. With a focus on responsible fishing and conservation efforts, the Skins Fishing Competition is a unique opportunity to connect with nature and showcase your skills. Join us for a weekend of fun, excitement, and friendly competition - whether you&apos;re a seasoned angler or a beginner looking to learn. We can&apos;t wait to see you there!</p>
 
 				<h3 className="terms-heading">Event Details:</h3>
 
 				<ul className="list-disc">
 					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Date:</strong> 8th - 9th July, 2023</li>
 					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Location:</strong> Kabeljouws Beach</li>
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Registration:</strong> Pre-registration is required. Visit our official festival website to secure your spot.</li>
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Skill Level:</strong> The event welcomes anglers of all experience levels, from beginners to advanced fishermen.</li>
 				</ul>
 
 				<h3 className="terms-heading">The Joy of Fishing:</h3>
