@@ -26,8 +26,8 @@ export default function MountainBiking(): JSX.Element {
 				<h3 className="terms-heading">Event Details:</h3>
 
 				<ul className="list-disc">
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Date:</strong> 13 July, 2023</li>
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Location:</strong> Jeffreys Bay and Surrounding Areas</li>
+					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Date:</strong> 15th - 16th July, 2023</li>
+					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Location:</strong> Mentorskraal</li>
 					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Registration:</strong> Pre-registration is required. Visit our official festival website to secure your spot.</li>
 					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Skill Level:</strong> The event caters to riders of various skill levels, with designated routes available for beginners, intermediate riders, and advanced riders.</li>
 				</ul>

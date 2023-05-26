@@ -26,8 +26,8 @@ export default function Fishing(): JSX.Element {
 				<h3 className="terms-heading">Event Details:</h3>
 
 				<ul className="list-disc">
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Date:</strong> 13 July, 2023</li>
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Location:</strong> Jeffreys Bay and Surrounding Fishing Zones</li>
+					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Date:</strong> 8th - 9th July, 2023</li>
+					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Location:</strong> Kabeljouws Beach</li>
 					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Registration:</strong> Pre-registration is required. Visit our official festival website to secure your spot.</li>
 					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Skill Level:</strong> The event welcomes anglers of all experience levels, from beginners to advanced fishermen.</li>
 				</ul>

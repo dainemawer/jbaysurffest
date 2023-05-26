@@ -30,7 +30,7 @@ export default function Home(): JSX.Element {
 			<div className="flex flex-col items-center mt-8">
 				<h1 className="text-4xl lg:text-7xl text-black text-center leading-tight max-w-[824px] uppercase font-extrabold mb-5">Welcome to the JBay Surf Festival, 2023</h1>
 				<CountdownTimer />
-				<p className="section-paragraph">The festival usually takes place over a period of 10 days in July, and features a variety of surfing competitions, exhibitions, and other related events. The main event is the World Surf League (WSL) Championship Tour, which is held at the famous Supertubes surf break, known for its long, hollow waves that are ideal for surfing.</p>
+				<p className="section-paragraph">The 10 day festival is the ultimate fusion of outdoor sports and music! Experience world-class surfing and outdoor entertainment with the Parkoff Music Festival featuring top local and international artists. Join us for an unforgettable experience of sun, surf and sound in the beautiful Jeffreys Bay.</p>
 			</div>
 			<Section id="music" label="Music for the Jbay Surf Festival" title="Music" rotate="-rotate-1 mb-8 lg:mb-16">
 				<p className="section-paragraph">Music enthusiasts from near and far for a memorable celebration of sound and rhythm. Set against the backdrop of the picturesque coastal town of Jeffreys Bay, this festival showcases a diverse lineup of talented musicians and bands, spanning various genres and styles.</p>

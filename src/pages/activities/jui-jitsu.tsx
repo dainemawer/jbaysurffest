@@ -26,8 +26,8 @@ export default function JuiJitsu(): JSX.Element {
 				<h3 className="terms-heading">Event Details:</h3>
 
 				<ul className="list-disc">
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Date:</strong> [Insert Date]</li>
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Location:</strong> [Insert Venue]</li>
+					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Date:</strong> 15th - 16th July, 2023</li>
+					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Location:</strong> Mentorskraal</li>
 					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Registration:</strong> Pre-registration is required. Visit our official festival website to secure your spot.</li>
 					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Skill Level:</strong> The event welcomes participants of all experience levels, with divisions available for beginners, intermediate, and advanced practitioners.</li>
 				</ul>
