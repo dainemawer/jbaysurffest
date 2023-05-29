@@ -1,7 +1,7 @@
 {
-  "name": "africanperfection",
+  "name": "jbaysurffest",
   "version": "1.0.0",
-  "description": "A NextJS site for African Perfection",
+  "description": "A NextJS site for the JBay Surf Fest",
   "main": "index.js",
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev",
