@@ -19,69 +19,42 @@ export default function MountainBiking(): JSX.Element {
 			<div className="page-container">
 				<h1 className="page-title">Mountain Biking</h1>
 				<Image sizes="(max-width: 500px) 500px, (max-width: 1023px) 959, 1000px" className="my-8 mx-auto" src="/images/mountain-biking.jpg" alt="Mountain bike on a hill at dusk" width="1000" height="667" />
-				<h2 className="text-lg lg:text-2xl text-black text-center leading-tight uppercase font-extrabold mb-12">Gear Up for the JBay Surf Festival Mountain Biking Event!</h2>
+				<h2 className="text-lg lg:text-2xl text-black text-center leading-tight uppercase font-extrabold mb-12">Jbay Wind Farm MTB Classic Back as Part Of The JBay Surf Festival, 2023</h2>
 
-				<p>The Mountain Biking Event at Mentorskraal, organized by Mountain Events, is a must-attend event for all those who love adrenaline-packed adventure and scenic outdoor beauty. With challenging biking trails and breath-taking views of the natural surroundings, this event promises an exhilarating experience that is sure to leave you with lasting memories. If the mountain biking is not for you, there will also be a fun run for all to enjoy!</p>
+				<p className="page-paragraph">
+					Jeffreys Bay Wind Farm has reaffirmed its patronage as title sponsor for the J-Bay Windfarm
+					MTB Classic &amp; Trail Run 2023, which forms part of the town&apos;s Jbay Surf Festival 2023
+					programme! Taking place on Saturday 15 th July this year, this event is now in its eighth
+					year, following a CV-19 hiatus.
+				</p>
 
 				<h3 className="terms-heading">Event Details:</h3>
 
 				<ul className="list-disc">
 					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Date:</strong> 15th - 16th July, 2023</li>
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Location:</strong> Mentorskraal</li>
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Registration:</strong> Pre-registration is required. Visit our official festival website to secure your spot.</li>
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Skill Level:</strong> The event caters to riders of various skill levels, with designated routes available for beginners, intermediate riders, and advanced riders.</li>
+					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Location:</strong> Wind Farm</li>
+					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Registration:</strong> Click the link below for registration at Mountain Events.</li>
 				</ul>
 
-				<h3 className="terms-heading">The Trails:</h3>
+				<br />
 
-				<p className="page-paragraph">Jeffreys Bay and its surroundings boast a plethora of captivating trails that are sure to get your heart pumping and your wheels spinning. During the Mountain Biking Event, you&apos;ll have the chance to explore:</p>
+				<p className="page-paragraph">The local wind project will once again provide support to this much-loved local event and remain
+				the title sponsor of the mountain bike and trail run event, which carries the unique distinction of
+				being the only one-day race in Africa to traverse a wind farm.</p>
 
-				<ul className="list-disc">
-					<li className="mb-4 last:mb-0 ml-4 text-lg">Coastal Trails: Enjoy the breathtaking coastal views as you navigate trails that wind along the rugged coastline. Feel the refreshing ocean breeze on your face as you tackle thrilling descents and challenging climbs.</li>
+				<p className="page-paragraph">“Being a carbon-free, clean sport, mountain-biking fits our wind farm&apos;s ethos perfectly, but more
+				importantly, this event is part of the town&apos;s overarching surfing event, which lies at the heart the
+				community,” announced Pieter Oosthuizen, Asset Director at Jeffreys Bay Wind Farm.</p>
 
-					<li className="mb-4 last:mb-0 ml-4 text-lg">Forest Routes: Immerse yourself in the tranquility of the lush forests surrounding Jeffreys Bay. Pedal through dense canopies, conquer technical sections, and revel in the natural beauty that surrounds you.</li>
+				<p className="page-paragraph">The event is created to suite a range of fitness and skill levels, welcoming all who want to be part
+				of this popular event. The race starts from Mentorskraal, Jeffreys Bay, and includes a 60km ride
+				for the serious riders; 30km ride and even a 10km for family and general enthusiasts. The trail run
+				caters for two fitness levels with 5km and 10km options. Prizes will be awarded to the first three
+				male and female athletes per distance.</p>
 
-					<li className="mb-4 last:mb-0 ml-4 text-lg">Dune Rides: Experience the unique thrill of riding through the towering dunes near Jeffreys Bay. Navigate sandy terrains, catch air on the dune jumps, and feel the rush of conquering these natural obstacles.</li>
+				<p className="page-paragraph">Entries will open on 9 June 2023, via the Mountain Events platform:</p>
 
-					<li className="mb-4 last:mb-0 ml-4 text-lg">Mountain Passes: Challenge yourself with the mountain passes that offer breathtaking vistas and exhilarating descents. Ride along ridges and witness the stunning landscapes that make this region a mountain biker&apos;s paradise.</li>
-				</ul>
-
-				<h3 className="terms-heading">How to Participate:</h3>
-
-				<p className="page-paragraph">Participating in the JBay Surf Festival Mountain Biking Event is a straightforward process. Here&apos;s what you need to do:</p>
-
-				<ul className="list-disc">
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Pre-register:</strong> Visit our official festival website and navigate to the Mountain Biking Event section to secure your spot. Early registration is recommended as spaces are limited.</li>
-
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Select Your Skill Level:</strong> Choose the appropriate route based on your skill level. Whether you&apos;re a beginner looking for a leisurely ride or an experienced rider seeking a challenging adventure, there&apos;s a route for you.</li>
-
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Gear Up:</strong> Ensure you have the necessary gear, including a well-maintained mountain bike, a helmet, and appropriate attire. It&apos;s also advisable to bring extra water, snacks, and any personal items you may need during the ride.</li>
-
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Attend the Briefing:</strong> On the day of the event, attend the mandatory briefing session to familiarize yourself with the routes, safety guidelines, and any specific instructions from the event organizers.</li>
-
-					<li className="mb-4 last:mb-0 ml-4 text-lg"><strong>Enjoy the Ride:</strong> Embark on an unforgettable mountain biking experience, soak up the incredible scenery, and revel in the camaraderie of fellow riders. Push your limits, conquer challenges, and make lasting memories.</li>
-				</ul>
-
-				<h3 className="terms-heading">Important Notes:</h3>
-
-				<ul className="list-disc">
-					<li className="mb-4 last:mb-0 ml-4 text-lg">
-						The JBay Surf Festival Mountain Biking Event requires participants to adhere to designated routes and follow all safety guidelines provided by event organizers.
-					</li>
-					<li className="mb-4 last:mb-0 ml-4 text-lg">
-						It is recommended that participants possess a reasonable level of fitness and experience in off-road biking.
-					</li>
-					<li className="mb-4 last:mb-0 ml-4 text-lg">
-						Participants are responsible for their own safety and well-being during the event.
-					</li>
-					<li className="mb-4 last:mb-0 ml-4 text-lg">
-						In case of inclement weather or unforeseen circumstances, event organizers reserve the right to make changes to the event schedule or routes.
-					</li>
-					<li className="mb-4 last:mb-0 ml-4 text-lg">
-						Gear up, tighten your helmet, and prepare for an unforgettable mountain biking experience at the JBay Surf Festival. Don&apos;t miss out on the chance to explore the incredible trails surrounding Jeffreys Bay and take part in this thrilling adventure.
-					</li>
-				</ul>
-				<p className="text-center mt-8"><a className="page-hyperlink" href="https://airdosh.co.za" target="_blank" rel="noreferrer">Enter the MTB Race</a></p>
+				<p className="text-center mt-8"><a className="page-hyperlink" href="https://mountainevents.co.za/events-calendar/j-bay-windfarm-mtb-classic-trail-run" target="_blank" rel="noreferrer">Enter the MTB Race</a></p>
 			</div>
 		</>
 	)
