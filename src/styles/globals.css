@@ -49,7 +49,7 @@
 	}
 
 	.navigation-link {
-		@apply uppercase font-medium text-base md:text-xl hover:bg-highlight-transparent cursor-pointer
+		@apply uppercase font-medium text-sm sm:text-base md:text-xl hover:bg-highlight-transparent cursor-pointer
 	}
 
 	.section-heading {

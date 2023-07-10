@@ -31,7 +31,7 @@ export default function Header(): JSX.Element {
 	}, []);
 
 	return (
-		<header className="mb-52" id="site-header" role="banner" aria-label="Site Header">
+		<header className="mb-32 lg:mb-52" id="site-header" role="banner" aria-label="Site Header">
 			<div className="container mx-auto max-w-full">
 				<figure ref={figure}>
 					<Image

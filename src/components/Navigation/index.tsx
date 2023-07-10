@@ -63,12 +63,12 @@ export default function Navigation({ className, id, label }: NavigationProps): J
 	return (
 		<div className="max-w-full">
 			<nav className={`navigation w-full ${className}`} id={id} role="navigation" aria-label={label}>
-				<div className="container px-8 flex items-center justify-between mx-auto max-w-7xl">
+				<div className="container px-2 lg:px-8 flex items-center justify-between mx-auto max-w-7xl">
 					<Logo margin="mt-0" />
 					<ul className="flex justify-center items-center">
 						{navigation.map((item, index) => {
 							return (
-								<li key={`navigation-${item.id}`} className={`mr-6 last:mr-0 ${item.submenu ? 'relative' : ''}`}>
+								<li key={`navigation-${item.id}`} className={`mr-2 lg:mr-6 last:mr-0 ${item.submenu ? 'relative' : ''}`}>
 									{item.submenu ? (
 										<button ref={buttonRef} onClick={handleClick} onKeyDown={handleKeyDown} aria-haspopup="true" aria-expanded={active ? 'true' : 'false'} className="navigation-link pr-6 relative items-center">
 											Activities
