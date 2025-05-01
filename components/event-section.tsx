@@ -68,7 +68,7 @@ export function EventSection({
           <div className={`${bannerStyle ? "md:col-span-2" : ""}`}>
             <div className={`relative ${bannerStyle ? "h-64 md:h-96" : "h-64 md:h-80"} overflow-hidden rounded-xl`}>
               <Image
-                src={imageSrc || "/placeholder.svg"}
+                src={"https://hebbkx1anhila5yf.public.blob.vercel-storage.com/placeholder-ob7miW3mUreePYfXdVwkpFWHthzoR5.svg?height=600&width=800" || imageSrc}
                 alt={title}
                 fill
                 sizes={bannerStyle ? "(max-width: 768px) 100vw, 1200px" : "(max-width: 768px) 100vw, 600px"}

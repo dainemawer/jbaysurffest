@@ -9,7 +9,7 @@ export function SponsorsTicker() {
 
   // Sample sponsor logos (using placeholders)
   const sponsors = [
-    { name: "Corona Cero", logo: "/images/corona-cero-logo.png" },
+    { name: "Corona Cero", logo: "/placeholder.svg?height=60&width=180" },
     { name: "Sponsor 2", logo: "/placeholder.svg?height=60&width=180" },
     { name: "Sponsor 3", logo: "/placeholder.svg?height=60&width=180" },
     { name: "Sponsor 4", logo: "/placeholder.svg?height=60&width=180" },
