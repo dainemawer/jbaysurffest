@@ -35,13 +35,13 @@ export default function RootLayout({
         {children}
         <JsonLdScript />
         {/* Google Analytics */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-MEASUREMENT_ID" strategy="afterInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-QR317W614P" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-MEASUREMENT_ID');
+            gtag('config', 'G-QR317W614P');
           `}
         </Script>
       </body>

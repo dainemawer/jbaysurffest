@@ -1,6 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import type React from "react"
+
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { CountdownTimer } from "@/components/countdown-timer"
@@ -10,103 +12,129 @@ import { Menu, X } from "lucide-react"
 import { SponsorsTicker } from "@/components/sponsors-ticker"
 import { FaqSection } from "@/components/faq-section"
 import { ContactForm } from "@/components/contact-form"
+import { TicketsModal } from "@/components/tickets-modal"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [ticketsModalOpen, setTicketsModalOpen] = useState(false)
 
   // Festival date - May 15, 2025
-  const festivalDate = new Date("2025-05-15T09:00:00")
+  const festivalDate = new Date("2025-07-11T09:00:00")
+
+  // Function to handle ticket button clicks
+  const handleTicketButtonClick = (e: React.MouseEvent) => {
+    e.preventDefault()
+    setTicketsModalOpen(true)
+  }
+
+  // Listen for custom events from EventSection components
+  useEffect(() => {
+    const handleTicketEvent = () => {
+      setTicketsModalOpen(true)
+    }
+
+    document.addEventListener("openTicketsModal", handleTicketEvent)
+
+    return () => {
+      document.removeEventListener("openTicketsModal", handleTicketEvent)
+    }
+  }, [])
 
   return (
     <div className="flex min-h-screen flex-col">
       {/* Mobile Menu */}
       <MobileMenu isOpen={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} />
 
+      {/* Tickets Modal */}
+      <TicketsModal isOpen={ticketsModalOpen} onClose={() => setTicketsModalOpen(false)} />
+
       {/* Header */}
       <header className="sticky top-0 z-50 bg-blue-500/95 backdrop-blur-sm">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
+        <div className="container max-w-6xl mx-auto flex h-16 items-center justify-between px-4">
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-surf-fest.png"
               alt="Jeffreys Bay Surf Festival"
-              width={150}
-              height={40}
-              className="h-10 w-auto"
+              width={338}
+              height={168}
+              className="h-10 w-auto invert"
               priority
             />
           </Link>
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link href="#wsl" className="text-white hover:text-blue-100 text-base font-heading">
-              WSL Tour
-            </Link>
-            <Link href="#parkoff" className="text-white hover:text-blue-100 text-base font-heading">
-              Park Off
-            </Link>
-            <Link href="#comedy" className="text-white hover:text-blue-100 text-base font-heading">
-              Comedy Night
-            </Link>
-            <Link href="#fanpark" className="text-white hover:text-blue-100 text-base font-heading">
-              Fan Park
-            </Link>
-            <Link href="#mtb" className="text-white hover:text-blue-100 text-base font-heading">
-              MTB
-            </Link>
-            <Link href="#jiujitsu" className="text-white hover:text-blue-100 text-base font-heading">
-              Jiujitsu
-            </Link>
-            <Link href="#funduro" className="text-white hover:text-blue-100 text-base font-heading">
-              Funduro
-            </Link>
-            <Link href="#fishing" className="text-white hover:text-blue-100 text-base font-heading">
-              Fishing
-            </Link>
-          </nav>
-          <div className="flex items-center space-x-4">
-            <Link
-              href="#tickets"
-              className="hidden md:inline-flex h-10 items-center justify-center rounded-md bg-[#f18a50] px-5 py-2 text-base font-heading text-white shadow transition-colors hover:bg-[#e07a40]"
-            >
-              Get Tickets
-            </Link>
-            <button
-              className="md:hidden text-white p-1 hover:bg-blue-600 rounded-md transition-colors"
-              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+          <div className="flex flex-row gap-8">
+            <nav className="hidden md:flex items-center space-x-6">
+              <Link href="#wsl" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+                WSL Tour
+              </Link>
+              <Link href="#parkoff" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+                Park Off
+              </Link>
+              <Link href="#comedy" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+                Comedy Night
+              </Link>
+              <Link href="#fanpark" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+                Fan Park
+              </Link>
+              <Link href="#mtb" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+                MTB
+              </Link>
+              <Link href="#jiujitsu" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+                Jiujitsu
+              </Link>
+              <Link href="#funduro" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+                Funduro
+              </Link>
+              <Link href="#fishing" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+                Fishing
+              </Link>
+            </nav>
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={handleTicketButtonClick}
+                className="hidden md:inline-flex h-10 items-center justify-center rounded-md bg-[#f18a50] px-5 py-2 text-base font-heading text-white shadow transition-colors hover:bg-[#e07a40]"
+              >
+                Get Tickets
+              </button>
+              <button
+                className="md:hidden text-white p-1 hover:bg-blue-600 rounded-md transition-colors"
+                aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
           </div>
         </div>
       </header>
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative bg-blue-500 py-20 md:py-32">
+        <section className="relative bg-blue-500 py-20 md:py-16">
           <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1>
               <Image
-                src="/images/park-off-logo.png"
-                alt="Park Off JBay 2025"
-                width={300}
-                height={100}
-                className="mx-auto mb-8"
+                src="/images/surf-fest-logo.png"
+                alt="Jeffreys Bay Surf Festival"
+                width={960}
+                height={479}
+                className="mx-auto mb-4"
                 priority
               />
-              <h1 className="text-5xl md:text-7xl font-heading text-white mb-6">Jeffreys Bay Surf Festival</h1>
-              <p className="text-xl text-blue-100 mb-8">
+              </h1>
+              <p className="text-xl max-w-xl mx-auto text-blue-100 mt-8 mb-2">
                 South Africa's premier surf, music, and adventure festival at the legendary Supertubes
               </p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">
-                <h2 className="text-2xl font-heading text-white mb-4">Event Starts In:</h2>
+              <div className="rounded-lg p-6 mb-8">
                 <CountdownTimer targetDate={festivalDate} />
               </div>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Link
-                  href="#tickets"
+                <button
+                  onClick={handleTicketButtonClick}
                   className="inline-flex h-14 items-center justify-center rounded-md bg-[#f18a50] px-8 py-4 text-lg font-heading text-white shadow transition-colors hover:bg-[#e07a40]"
                 >
                   Get Tickets
-                </Link>
+                </button>
                 <Link
                   href="#schedule"
                   className="inline-flex h-14 items-center justify-center rounded-md border border-white bg-transparent px-8 py-4 text-lg font-heading text-white shadow-sm transition-colors hover:bg-white/10"
@@ -125,7 +153,7 @@ export default function Home() {
           title="WSL Jeffreys Bay Tour Stop"
           description="Experience world-class surfing as the World Surf League brings the Championship Tour to the legendary waves of Supertubes. Watch the world's best surfers compete in one of the most iconic right-hand point breaks on the planet."
           imageSrc="/images/wsl-event.jpg"
-          logoSrc="/images/corona-cero-logo.png"
+          logoSrc="/images/wsl-logo.png"
           logoAlt="Corona Cero"
           buttonText="Visit WSL Website"
           buttonLink="https://www.worldsurfleague.com"
@@ -177,11 +205,11 @@ export default function Home() {
         {/* MTB Section */}
         <EventSection
           id="mtb"
-          title="Mountain Biking Competition"
+          title="MTB Classic and Trail Run"
           description="Take on the challenging trails of the Eastern Cape in our mountain biking competition. With categories for all skill levels and spectacular coastal routes, this event combines technical riding with breathtaking ocean views."
           imageSrc="/images/mtb-event.jpg"
-          buttonText="MTB Website"
-          buttonLink="#mtb-website"
+          buttonText="Visit Event Website"
+          buttonLink="https://jbaymtbclassic.org.za/"
           imagePosition="right"
           bgColor="bg-white"
           bannerStyle={true}
@@ -278,12 +306,12 @@ export default function Home() {
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
               Secure your tickets now for South Africa's most exciting surf and lifestyle festival
             </p>
-            <Link
-              href="#tickets"
+            <button
+              onClick={handleTicketButtonClick}
               className="inline-flex h-14 items-center justify-center rounded-md bg-mint-300 px-10 py-4 text-xl font-heading text-white shadow transition-colors hover:bg-mint-400"
             >
               Get Your Tickets
-            </Link>
+            </button>
           </div>
         </section>
       </main>
@@ -294,11 +322,11 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <Image
-                src="/images/park-off-logo.png"
-                alt="Park Off JBay 2025"
-                width={150}
-                height={50}
-                className="mb-4"
+                src="/images/logo-surf-fest.png"
+                alt="Jeffreys Bay Surf Festival"
+                width={338}
+                height={168}
+                className="w-auto h-14 invert mb-4"
               />
               <p className="text-blue-200 text-sm">
                 South Africa's premier surf, music, and adventure festival at the legendary Supertubes, Jeffreys Bay.
@@ -313,9 +341,9 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#tickets" className="text-blue-200 hover:text-white">
+                  <button onClick={handleTicketButtonClick} className="text-blue-200 hover:text-white">
                     Tickets
-                  </Link>
+                  </button>
                 </li>
                 <li>
                   <Link href="#schedule" className="text-blue-200 hover:text-white">
@@ -357,17 +385,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4">Connect With Us</h3>
               <div className="flex space-x-4 mb-4">
-                <Link href="#" className="text-blue-200 hover:text-white">
-                  <span className="sr-only">Facebook</span>
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path
-                      fillRule="evenodd"
-                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </Link>
-                <Link href="#" className="text-blue-200 hover:text-white">
+                <a href="https://www.instagram.com/jbaysurffestival/" className="text-blue-200 hover:text-white">
                   <span className="sr-only">Instagram</span>
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -376,13 +394,7 @@ export default function Home() {
                       clipRule="evenodd"
                     />
                   </svg>
-                </Link>
-                <Link href="#" className="text-blue-200 hover:text-white">
-                  <span className="sr-only">Twitter</span>
-                  <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                  </svg>
-                </Link>
+                </a>
               </div>
               <p className="text-sm text-blue-200">Follow us for updates and giveaways!</p>
             </div>

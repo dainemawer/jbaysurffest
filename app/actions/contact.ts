@@ -1,6 +1,10 @@
 "use server"
 
 import { z } from "zod"
+import { Resend } from "resend"
+
+// Initialize Resend with API key
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 // Define validation schema using Zod
 const ContactFormSchema = z.object({
@@ -58,23 +62,42 @@ export async function submitContactForm(prevState: ContactFormState, formData: F
   }
 
   try {
-    // Here you would typically:
-    // 1. Store the contact form data in a database
-    // 2. Send an email notification
-    // 3. Log the submission
+    // Send email using Resend
+    if (process.env.RESEND_API_KEY) {
+      try {
+        const { data, error } = await resend.emails.send({
+          from: "JBay Surf Festival <contact@jbaysurffest.co.za>",
+          to: ["vangie@jbaysurffest.co.za"], // Replace with your actual email
+          subject: `New Contact Form Submission from ${rawFormData.name}`,
+          reply_to: rawFormData.email,
+          text: `
+Name: ${rawFormData.name}
+Email: ${rawFormData.email}
+Message: ${rawFormData.message}
+          `,
+          html: `
+<div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+  <h1 style="color: #3b82f6; font-size: 24px;">New Contact Form Submission</h1>
+  <p><strong>Name:</strong> ${rawFormData.name}</p>
+  <p><strong>Email:</strong> ${rawFormData.email}</p>
+  <p><strong>Message:</strong></p>
+  <p style="background-color: #f9fafb; padding: 12px; border-radius: 4px;">${rawFormData.message}</p>
+</div>
+          `,
+        })
 
-    // Example of sending an email (commented out as we don't have actual email service)
-    /*
-    await sendEmail({
-      to: "festival@example.com",
-      subject: `New contact form submission from ${rawFormData.name}`,
-      text: `
-        Name: ${rawFormData.name}
-        Email: ${rawFormData.email}
-        Message: ${rawFormData.message}
-      `,
-    });
-    */
+        if (error) {
+          console.error("Error sending email with Resend:", error)
+          // Continue execution - we'll still consider the form submission successful
+          // even if email sending fails
+        }
+      } catch (emailError) {
+        console.error("Exception when sending email:", emailError)
+        // Continue execution
+      }
+    } else {
+      console.log("RESEND_API_KEY not configured. Email not sent.")
+    }
 
     // Log the submission (for demonstration)
     console.log("Contact form submission:", {
