@@ -54,7 +54,7 @@ export function FaqSection() {
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-heading text-gray-900 mb-4">Frequently Asked Questions</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Everything you need to know about the Jeffreys Bay Surf Festival
+            Find all the information you need about dates, tickets, accommodations, event participation, and more to make the most of your festival experience.
           </p>
         </div>
 

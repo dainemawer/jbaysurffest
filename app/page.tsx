@@ -116,16 +116,16 @@ export default function Home() {
               <Image
                 src="/images/surf-fest-logo.png"
                 alt="Jeffreys Bay Surf Festival"
-                width={960}
-                height={479}
+                width={820}
+                height={418}
                 className="mx-auto mb-4"
                 priority
               />
               </h1>
-              <p className="text-xl max-w-xl mx-auto text-blue-100 mt-8 mb-2">
-                South Africa's premier surf, music, and adventure festival at the legendary Supertubes
+              <p className="text-xl max-w-2xl mx-auto text-blue-100 mt-8 mb-2">
+                Join us from July 11–20, 2025, at Supertubes Beach, Jeffreys Bay, for South Africa’s premier surf, music, and adventure festival. Witness world-class surfing, enjoy live music, and partake in thrilling activities along the Eastern Cape’s stunning coastline.
               </p>
-              <div className="rounded-lg p-6 mb-8">
+              <div className="rounded-lg p-6 mb-4">
                 <CountdownTimer targetDate={festivalDate} />
               </div>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -150,12 +150,12 @@ export default function Home() {
         {/* WSL Section */}
         <EventSection
           id="wsl"
-          title="WSL Jeffreys Bay Tour Stop"
-          description="Experience world-class surfing as the World Surf League brings the Championship Tour to the legendary waves of Supertubes. Watch the world's best surfers compete in one of the most iconic right-hand point breaks on the planet."
-          imageSrc="/images/wsl-event.jpg"
+          title="Watch the World’s Best Surfers at Supertubes"
+          description="Experience the excitement as the World Surf League’s Championship Tour returns to Jeffreys Bay. See top surfers compete on the legendary right-hand point break, delivering high-performance action in one of the world’s most iconic surf spots."
+          imageSrc="/images/wsl.jpg"
           logoSrc="/images/wsl-logo.png"
           logoAlt="Corona Cero"
-          buttonText="Visit WSL Website"
+          buttonText="Visit The WSL"
           buttonLink="https://www.worldsurfleague.com"
           imagePosition="right"
           bgColor="bg-white"
@@ -164,10 +164,10 @@ export default function Home() {
         {/* Park Off Section */}
         <EventSection
           id="parkoff"
-          title="Park Off Music Festival"
-          description="South Africa's hottest music festival comes to JBay! Featuring top local and international artists across multiple stages, Park Off delivers an unforgettable weekend of music, dancing, and good vibes right on the beach."
-          imageSrc="/images/music-festival.jpg"
-          logoSrc="/images/park-off-logo.png"
+          title="Dance to the Rhythm at Park Off Music Festival"
+          description="Immerse yourself in electrifying performances by top local and international artists. Park Off brings unforgettable music, dancing, and beach vibes to Jeffreys Bay’s shores."
+          imageSrc="/images/parkoff.jpg"
+          logoSrc="/images/parkoff-logo.png"
           logoAlt="Park Off"
           buttonText="Buy Tickets"
           buttonLink="#tickets"
@@ -179,9 +179,9 @@ export default function Home() {
         {/* Comedy Night Section */}
         <EventSection
           id="comedy"
-          title="Comedy Night"
-          description="Laugh until your sides hurt with South Africa's funniest comedians. Our comedy night brings together the best stand-up talent for an evening of hilarious entertainment that's the perfect complement to days spent in the sun and surf."
-          imageSrc="/images/comedy-night.jpg"
+          title="Laugh Out Loud with South Africa’s Top Comedians"
+          description="Enjoy an evening of side-splitting humor as renowned comedians take the stage. Comedy Night offers the perfect blend of laughter and entertainment amidst the festival’s vibrant atmosphere."
+          imageSrc="/images/comedy.jpg"
           buttonText="Buy Tickets"
           buttonLink="#tickets"
           imagePosition="right"
@@ -192,9 +192,9 @@ export default function Home() {
         {/* Fan Park Section */}
         <EventSection
           id="fanpark"
-          title="Fan Park"
-          description="The heart of the festival! Our Fan Park features food vendors, merchandise, athlete meet-and-greets, live broadcasts of the surf competition, and plenty of activities for the whole family. Check the schedule for special events throughout the festival."
-          imageSrc="/images/fan-park.jpg"
+          title="Explore the Heartbeat of the Festival at Fan Park"
+          description="Discover a hub of excitement with food vendors, merchandise stalls, athlete meet-and-greets, live surf broadcasts, and family-friendly activities. Fan Park is your go-to destination for festival fun."
+          imageSrc="/images/fanpark.jpg"
           buttonText="View Schedule"
           buttonLink="#schedule"
           imagePosition="left"
@@ -205,9 +205,9 @@ export default function Home() {
         {/* MTB Section */}
         <EventSection
           id="mtb"
-          title="MTB Classic and Trail Run"
-          description="Take on the challenging trails of the Eastern Cape in our mountain biking competition. With categories for all skill levels and spectacular coastal routes, this event combines technical riding with breathtaking ocean views."
-          imageSrc="/images/mtb-event.jpg"
+          title="Conquer the Trails at the MTB Classic and Trail Run"
+          description="Challenge yourself on scenic coastal routes suitable for all skill levels. Experience the thrill of mountain biking and trail running amidst Jeffreys Bay’s breathtaking landscapes."
+          imageSrc="/images/mtb.jpg"
           buttonText="Visit Event Website"
           buttonLink="https://jbaymtbclassic.org.za/"
           imagePosition="right"
@@ -218,9 +218,9 @@ export default function Home() {
         {/* Jiujitsu Section */}
         <EventSection
           id="jiujitsu"
-          title="Jiujitsu Tournament"
-          description="Watch or participate in our Brazilian Jiujitsu tournament featuring competitors from across South Africa. From beginners to black belts, this event showcases the technical skill and competitive spirit of this dynamic martial art."
-          imageSrc="/images/jiujitsu-event.jpg"
+          title="Witness High-Octane Action at the Jiujitsu Tournament"
+          description="Watch skilled martial artists from across South Africa compete in dynamic Brazilian Jiujitsu matches, showcasing technique, strength, and sportsmanship."
+          imageSrc="/images/jiu.jpg"
           buttonText="Tournament Info"
           buttonLink="#jiujitsu-info"
           imagePosition="left"
@@ -232,10 +232,10 @@ export default function Home() {
         {/* Funduro Section */}
         <EventSection
           id="funduro"
-          title="Funduro"
-          description="Adventure motorcyclists will love our Funduro event! Navigate challenging terrain along the beautiful Wild Coast in this fun, non-competitive ride that's all about the joy of off-road motorcycling in one of South Africa's most scenic regions."
-          imageSrc="/images/funduro-event.jpg"
-          buttonText="Funduro Website"
+          title="Embark on an Off-Road Adventure with Funduro"
+          description="Navigate challenging terrains along the Wild Coast in this exhilarating, non-competitive motorcycle ride. Funduro offers adventure enthusiasts a unique way to explore Jeffreys Bay’s natural beauty."
+          imageSrc="/images/funduro.jpg"
+          buttonText="Visit The Funduro"
           buttonLink="#funduro-website"
           imagePosition="right"
           bgColor="bg-white"
@@ -245,9 +245,9 @@ export default function Home() {
         {/* Fishing Section */}
         <EventSection
           id="fishing"
-          title="Fishing Competition"
-          description="Cast your line in our annual fishing competition! With categories for shore angling and deep sea fishing, anglers of all types can test their skills in the fish-rich waters of Jeffreys Bay and compete for prizes and bragging rights."
-          imageSrc="/images/fishing-event.jpg"
+          title="Cast Your Line at the Annual Fishing Competition"
+          description="Test your angling skills in both shore and deep-sea categories. Compete for prizes and bragging rights in Jeffreys Bay’s rich fishing waters."
+          imageSrc="/images/fishing.jpg"
           buttonText="Fishing Website"
           buttonLink="#fishing-website"
           imagePosition="left"
@@ -269,8 +269,7 @@ export default function Home() {
               <div>
                 <h2 className="text-4xl md:text-5xl font-heading text-gray-900 mb-6">Get In Touch</h2>
                 <p className="text-xl text-gray-600 mb-8">
-                  Have questions about the festival? Want to inquire about sponsorship opportunities? Send us a message
-                  and our team will get back to you as soon as possible.
+                  Have questions or need assistance? Reach out to our team for inquiries about the festival, sponsorship opportunities, or general information.
                 </p>
                 <div className="flex items-center space-x-4 text-mint-600">
                   <div className="bg-mint-200 p-3 rounded-full">
@@ -289,7 +288,7 @@ export default function Home() {
                       <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
                   </div>
-                  <span className="text-gray-700">We'll get back to you as soon as possible</span>
+                  <span className="text-gray-700">We'll get back to you as soon as possible.</span>
                 </div>
               </div>
               <div>
@@ -304,7 +303,7 @@ export default function Home() {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl md:text-5xl font-heading text-white mb-6">Don't Miss Out on the Action!</h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Secure your tickets now for South Africa's most exciting surf and lifestyle festival
+              Secure your tickets now for South Africa's most exciting surf and lifestyle festival.
             </p>
             <button
               onClick={handleTicketButtonClick}

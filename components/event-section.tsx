@@ -94,9 +94,9 @@ export function EventSection({
           </div>
 
           <div className={`${bannerStyle ? "md:col-span-2" : ""}`}>
-            <div className={`relative ${bannerStyle ? "h-64 md:h-96" : "h-64 md:h-80"} overflow-hidden rounded-xl`}>
+            <div className={`relative ${bannerStyle ? "h-64 md:h-96" : "h-64 md:h-96"} overflow-hidden rounded-xl`}>
               <Image
-                src={"/placeholder.svg" || imageSrc}
+                src={imageSrc || "/placeholder.svg"}
                 alt={title}
                 fill
                 sizes={bannerStyle ? "(max-width: 768px) 100vw, 1200px" : "(max-width: 768px) 100vw, 600px"}

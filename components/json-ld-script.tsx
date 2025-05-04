@@ -19,10 +19,10 @@ export function JsonLdScript() {
         addressCountry: "ZA",
       },
     },
-    image: ["https://www.jbaysurffestival.com/images/festival-2025.jpg"],
+    image: ["https://www.jbaysurffest.co.za/images/festival-2025.jpg"],
     offers: {
       "@type": "Offer",
-      url: "https://www.jbaysurffestival.com/tickets",
+      url: "https://airdosh.co.za/#/",
       price: "250",
       priceCurrency: "ZAR",
       availability: "https://schema.org/InStock",
@@ -31,7 +31,7 @@ export function JsonLdScript() {
     organizer: {
       "@type": "Organization",
       name: "Jeffreys Bay Surf Festival",
-      url: "https://www.jbaysurffestival.com",
+      url: "https://www.jbaysurffest.co.za",
     },
     subEvents: [
       {

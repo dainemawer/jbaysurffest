@@ -47,7 +47,7 @@ export function SponsorsTicker() {
   return (
     <section className="py-12 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-heading text-center text-gray-900 mb-8">Our Sponsors</h2>
+        <h2 className="text-3xl md:text-4xl font-heading text-center text-gray-900 mb-8">Proudly Supported by Our Valued Sponsors</h2>
         <div className="relative overflow-hidden" ref={scrollRef}>
           <div
             className={`flex items-center space-x-12 py-6 ${isVisible ? "animate-marquee" : ""}`}
