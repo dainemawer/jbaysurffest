@@ -3,12 +3,13 @@
 import type React from "react"
 
 import Image from "next/image"
+import { ImageSlideshow } from "./image-slideshow"
 
 interface EventSectionProps {
   id: string
   title: string
   description: string
-  imageSrc: string
+  images: string[]
   logoSrc?: string
   logoAlt?: string
   buttonText: string
@@ -23,7 +24,7 @@ export function EventSection({
   id,
   title,
   description,
-  imageSrc,
+  images,
   logoSrc,
   logoAlt,
   buttonText,
@@ -45,13 +46,27 @@ export function EventSection({
     }
   }
 
+  // Determine if we should swap columns on desktop
+  const shouldSwapColumns =
+    bgColor === "bg-mint-50" && !bannerStyle;
+
   return (
     <section id={id} className={`py-16 md:py-24 ${bgColor} content-visibility-auto`}>
       <div className="container mx-auto px-4">
         <div
-          className={`grid md:grid-cols-2 gap-8 md:gap-12 items-center ${imagePosition === "right" ? "" : "md:grid-flow-dense"}`}
+          className={`grid ${
+            shouldSwapColumns
+              ? "md:grid-cols-[1.5fr_1fr]"
+              : "md:grid-cols-[1fr_1.5fr]"
+          } gap-8 md:gap-12 items-center`}
         >
-          <div className={`space-y-6 ${bannerStyle ? "md:col-span-2 text-center max-w-3xl mx-auto mb-8" : ""}`}>
+          {/* Text Column */}
+          <div
+            className={`space-y-4 md:space-y-6 ${bannerStyle ? "md:col-span-2 text-center max-w-3xl mx-auto mb-8" : ""}
+              ${shouldSwapColumns ? "md:order-2" : "md:order-1"}
+              order-1
+            `}
+          >
             {logoSrc && (
               <div className="mb-6">
                 <Image
@@ -64,8 +79,8 @@ export function EventSection({
                 />
               </div>
             )}
-            <h2 className="text-4xl md:text-5xl font-heading tracking-tight text-gray-900">{title}</h2>
-            <p className="text-lg text-gray-600">{description}</p>
+            <h2 className="text-5xl md:text-6xl font-heading tracking-tight text-gray-900">{title}</h2>
+            <p className="text-base md:text-xl text-gray-600 mb-8">{description}</p>
             <div>
               {isTicketButton ? (
                 <button
@@ -93,17 +108,14 @@ export function EventSection({
             </div>
           </div>
 
-          <div className={`${bannerStyle ? "md:col-span-2" : ""}`}>
-            <div className={`relative ${bannerStyle ? "h-64 md:h-96" : "h-64 md:h-96"} overflow-hidden rounded-xl`}>
-              <Image
-                src={imageSrc || "/placeholder.svg"}
-                alt={title}
-                fill
-                sizes={bannerStyle ? "(max-width: 768px) 100vw, 1200px" : "(max-width: 768px) 100vw, 600px"}
-                className="object-cover"
-                loading="lazy"
-              />
-            </div>
+          {/* Image Column */}
+          <div
+            className={`${bannerStyle ? "md:col-span-2" : ""}
+              ${shouldSwapColumns ? "md:order-1" : "md:order-2"}
+              order-2
+            `}
+          >
+            <ImageSlideshow images={images} alt={title} aspectRatio={bannerStyle ? "banner" : "standard"} />
           </div>
         </div>
       </div>

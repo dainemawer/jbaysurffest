@@ -40,6 +40,57 @@ export default function Home() {
     }
   }, [])
 
+
+  // Sample image arrays for each event section
+  // In a real implementation, you would have actual image paths for each event
+  const wslImages = [
+    "/images/wsl-event.jpg",
+    "/placeholder.svg?height=600&width=800&text=WSL+Image+2",
+    "/placeholder.svg?height=600&width=800&text=WSL+Image+3",
+  ]
+
+  const parkOffImages = [
+    "/images/music-festival.jpg",
+    "/placeholder.svg?height=600&width=800&text=Park+Off+Image+2",
+    "/placeholder.svg?height=600&width=800&text=Park+Off+Image+3",
+  ]
+
+  const comedyImages = [
+    "/images/comedy-night.jpg",
+    "/placeholder.svg?height=600&width=800&text=Comedy+Image+2",
+    "/placeholder.svg?height=600&width=800&text=Comedy+Image+3",
+  ]
+
+  const fanParkImages = [
+    "/images/fan-park.jpg",
+    "/placeholder.svg?height=600&width=800&text=Fan+Park+Image+2",
+    "/placeholder.svg?height=600&width=800&text=Fan+Park+Image+3",
+  ]
+
+  const mtbImages = [
+    "/images/mtb-event.jpg",
+    "/placeholder.svg?height=600&width=800&text=MTB+Image+2",
+    "/placeholder.svg?height=600&width=800&text=MTB+Image+3",
+  ]
+
+  const jiujitsuImages = [
+    "/images/jiujitsu-event.jpg",
+    "/placeholder.svg?height=600&width=800&text=Jiujitsu+Image+2",
+    "/placeholder.svg?height=600&width=800&text=Jiujitsu+Image+3",
+  ]
+
+  const funduroImages = [
+    "/images/funduro-event.jpg",
+    "/placeholder.svg?height=600&width=800&text=Funduro+Image+2",
+    "/placeholder.svg?height=600&width=800&text=Funduro+Image+3",
+  ]
+
+  const fishingImages = [
+    "/images/fishing-event.jpg",
+    "/placeholder.svg?height=600&width=800&text=Fishing+Image+2",
+    "/placeholder.svg?height=600&width=800&text=Fishing+Image+3",
+  ]
+
   return (
     <div className="flex min-h-screen flex-col">
       {/* Mobile Menu */}
@@ -152,7 +203,7 @@ export default function Home() {
           id="wsl"
           title="Watch the World’s Best Surfers at Supertubes"
           description="Experience the excitement as the World Surf League’s Championship Tour returns to Jeffreys Bay. See top surfers compete on the legendary right-hand point break, delivering high-performance action in one of the world’s most iconic surf spots."
-          imageSrc="/images/wsl.jpg"
+          images={wslImages}
           logoSrc="/images/wsl-logo.png"
           logoAlt="Corona Cero"
           buttonText="Visit The WSL"
@@ -166,7 +217,7 @@ export default function Home() {
           id="parkoff"
           title="Dance to the Rhythm at Park Off Music Festival"
           description="Immerse yourself in electrifying performances by top local and international artists. Park Off brings unforgettable music, dancing, and beach vibes to Jeffreys Bay’s shores."
-          imageSrc="/images/parkoff.jpg"
+          images={parkOffImages}
           logoSrc="/images/parkoff-logo.png"
           logoAlt="Park Off"
           buttonText="Buy Tickets"
@@ -181,7 +232,7 @@ export default function Home() {
           id="comedy"
           title="Laugh Out Loud with South Africa’s Top Comedians"
           description="Enjoy an evening of side-splitting humor as renowned comedians take the stage. Comedy Night offers the perfect blend of laughter and entertainment amidst the festival’s vibrant atmosphere."
-          imageSrc="/images/comedy.jpg"
+          images={comedyImages}
           buttonText="Buy Tickets"
           buttonLink="#tickets"
           imagePosition="right"
@@ -194,7 +245,7 @@ export default function Home() {
           id="fanpark"
           title="Explore the Heartbeat of the Festival at Fan Park"
           description="Discover a hub of excitement with food vendors, merchandise stalls, athlete meet-and-greets, live surf broadcasts, and family-friendly activities. Fan Park is your go-to destination for festival fun."
-          imageSrc="/images/fanpark.jpg"
+          images={fanParkImages}
           buttonText="View Schedule"
           buttonLink="#schedule"
           imagePosition="left"
@@ -207,7 +258,7 @@ export default function Home() {
           id="mtb"
           title="Conquer the Trails at the MTB Classic and Trail Run"
           description="Challenge yourself on scenic coastal routes suitable for all skill levels. Experience the thrill of mountain biking and trail running amidst Jeffreys Bay’s breathtaking landscapes."
-          imageSrc="/images/mtb.jpg"
+          images={mtbImages}
           buttonText="Visit Event Website"
           buttonLink="https://jbaymtbclassic.org.za/"
           imagePosition="right"
@@ -220,7 +271,7 @@ export default function Home() {
           id="jiujitsu"
           title="Witness High-Octane Action at the Jiujitsu Tournament"
           description="Watch skilled martial artists from across South Africa compete in dynamic Brazilian Jiujitsu matches, showcasing technique, strength, and sportsmanship."
-          imageSrc="/images/jiu.jpg"
+          images={jiujitsuImages}
           buttonText="Tournament Info"
           buttonLink="#jiujitsu-info"
           imagePosition="left"
@@ -234,7 +285,7 @@ export default function Home() {
           id="funduro"
           title="Embark on an Off-Road Adventure with Funduro"
           description="Navigate challenging terrains along the Wild Coast in this exhilarating, non-competitive motorcycle ride. Funduro offers adventure enthusiasts a unique way to explore Jeffreys Bay’s natural beauty."
-          imageSrc="/images/funduro.jpg"
+          images={funduroImages}
           buttonText="Visit The Funduro"
           buttonLink="#funduro-website"
           imagePosition="right"
@@ -247,7 +298,7 @@ export default function Home() {
           id="fishing"
           title="Cast Your Line at the Annual Fishing Competition"
           description="Test your angling skills in both shore and deep-sea categories. Compete for prizes and bragging rights in Jeffreys Bay’s rich fishing waters."
-          imageSrc="/images/fishing.jpg"
+          images={fishingImages}
           buttonText="Fishing Website"
           buttonLink="#fishing-website"
           imagePosition="left"
