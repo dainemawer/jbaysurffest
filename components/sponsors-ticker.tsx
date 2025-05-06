@@ -9,17 +9,17 @@ export function SponsorsTicker() {
 
   // Sample sponsor logos (using placeholders)
   const sponsors = [
-    { name: "Corona Cero", logo: "/sponsors/corona.jpg" },
-    { name: "Red Bull", logo: "/sponsors/redbull.jpg" },
-    { name: "Grit", logo: "/sponsors/grit.jpg" },
-    { name: "JBay Wind Farm", logo: "/sponsors/jbaywindfarm.jpg" },
-    { name: "Kouga Municipality", logo: "/sponsors/kouga.jpg" },
-    { name: "Oakley", logo: "/sponsors/oakley.jpg" },
-    { name: "Prime Self", logo: "/sponsors/primeself.jpg" },
-    { name: "Revive", logo: "/sponsors/revive.jpg" },
-    { name: "Sealand", logo: "/sponsors/sealand.jpg" },
-    { name: "The Pound", logo: "/sponsors/thepound.jpg" },
-    { name: "Water", logo: "/sponsors/water.jpg" },
+    { name: "Corona Cero", logo: "/images/sponsors/corona.jpg" },
+    { name: "Red Bull", logo: "/images/sponsors/redbull.jpg" },
+    { name: "Grit", logo: "/images/sponsors/grit.jpg" },
+    { name: "JBay Wind Farm", logo: "/images/sponsors/jbaywindfarm.jpg" },
+    { name: "Kouga Municipality", logo: "/images/sponsors/kouga.jpg" },
+    { name: "Oakley", logo: "/images/sponsors/oakley.jpg" },
+    { name: "Prime Self", logo: "/images/sponsors/primeself.jpg" },
+    { name: "Revive", logo: "/images/sponsors/revive.jpg" },
+    { name: "Sealand", logo: "/images/sponsors/sealand.jpg" },
+    { name: "The Pound", logo: "/images/sponsors/thepound.jpg" },
+    { name: "Water", logo: "/images/sponsors/water.jpg" },
   ]
 
   // Duplicate sponsors for continuous scrolling

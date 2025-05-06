@@ -44,51 +44,71 @@ export default function Home() {
   // Sample image arrays for each event section
   // In a real implementation, you would have actual image paths for each event
   const wslImages = [
-    "/images/wsl-event.jpg",
-    "/placeholder.svg?height=600&width=800&text=WSL+Image+2",
-    "/placeholder.svg?height=600&width=800&text=WSL+Image+3",
+    "images/wsl/wsl-1.jpg",
+    "images/wsl/wsl-2.jpg",
+    "images/wsl/wsl-3.jpg",
+    "images/wsl/wsl-4.jpg",
+    "images/wsl/wsl-5.jpg",
+    "images/wsl/wsl-6.jpg",
+    "images/wsl/wsl-7.jpg",
+    "images/wsl/wsl-8.jpg",
+    "images/wsl/wsl-9.jpg",
   ]
 
   const parkOffImages = [
-    "/images/music-festival.jpg",
-    "/placeholder.svg?height=600&width=800&text=Park+Off+Image+2",
-    "/placeholder.svg?height=600&width=800&text=Park+Off+Image+3",
+    "/images/parkoff/parkoff-1.jpg",
+    "/images/parkoff/parkoff-2.jpg",
+    "/images/parkoff/parkoff-3.jpg",
+    "/images/parkoff/parkoff-4.jpg",
+    "/images/parkoff/parkoff-5.jpg",
+    "/images/parkoff/parkoff-6.jpg",
   ]
 
   const comedyImages = [
-    "/images/comedy-night.jpg",
-    "/placeholder.svg?height=600&width=800&text=Comedy+Image+2",
-    "/placeholder.svg?height=600&width=800&text=Comedy+Image+3",
+    "/images/comedy/comedy-1.jpg",
+    "/images/comedy/comedy-2.jpg",
+    "/images/comedy/comedy-3.jpg",
+    "/images/comedy/comedy-4.jpg",
+    "/images/comedy/comedy-5.jpg",
+    "/images/comedy/comedy-6.jpg",
   ]
 
   const fanParkImages = [
-    "/images/fan-park.jpg",
-    "/placeholder.svg?height=600&width=800&text=Fan+Park+Image+2",
-    "/placeholder.svg?height=600&width=800&text=Fan+Park+Image+3",
+    "/images/fanpark/fanpark-1.jpg",
+    "/images/fanpark/fanpark-2.jpg",
+    "/images/fanpark/fanpark-3.jpg",
+    "/images/fanpark/fanpark-4.jpg",
+    "/images/fanpark/fanpark-5.jpg",
+    "/images/fanpark/fanpark-6.jpg",
+    "/images/fanpark/fanpark-7.jpg",
   ]
 
   const mtbImages = [
-    "/images/mtb-event.jpg",
-    "/placeholder.svg?height=600&width=800&text=MTB+Image+2",
-    "/placeholder.svg?height=600&width=800&text=MTB+Image+3",
+    "/images/mtb/mtb-1.jpg",
+    "/images/mtb/mtb-2.jpg",
+    "/images/mtb/mtb-3.jpg",
+    "/images/mtb/mtb-4.jpg",
   ]
 
   const jiujitsuImages = [
-    "/images/jiujitsu-event.jpg",
-    "/placeholder.svg?height=600&width=800&text=Jiujitsu+Image+2",
-    "/placeholder.svg?height=600&width=800&text=Jiujitsu+Image+3",
+    "/images/jiu/jiu-1.jpg",
+    "/images/jiu/jiu-2.jpg",
+    "/images/jiu/jiu-3.jpg",
+    "/images/jiu/jiu-4.jpg",
   ]
 
   const funduroImages = [
-    "/images/funduro-event.jpg",
-    "/placeholder.svg?height=600&width=800&text=Funduro+Image+2",
-    "/placeholder.svg?height=600&width=800&text=Funduro+Image+3",
+    "/images/funduro/funduro-1.jpg",
+    "/images/funduro/funduro-2.jpg",
+    "/images/funduro/funduro-3.jpg",
+    "/images/funduro/funduro-4.jpg",
   ]
 
   const fishingImages = [
-    "/images/fishing-event.jpg",
-    "/placeholder.svg?height=600&width=800&text=Fishing+Image+2",
-    "/placeholder.svg?height=600&width=800&text=Fishing+Image+3",
+    "/images/fishing/fishing-1.jpg",
+    "/images/fishing/fishing-2.jpg",
+    "/images/fishing/fishing-3.jpg",
+    "/images/fishing/fishing-4.jpg",
   ]
 
   return (
@@ -237,7 +257,6 @@ export default function Home() {
           buttonLink="#tickets"
           imagePosition="right"
           bgColor="bg-white"
-          bannerStyle={true}
         />
 
         {/* Fan Park Section */}
@@ -263,7 +282,6 @@ export default function Home() {
           buttonLink="https://jbaymtbclassic.org.za/"
           imagePosition="right"
           bgColor="bg-white"
-          bannerStyle={true}
         />
 
         {/* Jiujitsu Section */}
@@ -276,7 +294,6 @@ export default function Home() {
           buttonLink="#jiujitsu-info"
           imagePosition="left"
           bgColor="bg-mint-50"
-          bannerStyle={true}
           useMintButton={true}
         />
 
@@ -290,7 +307,6 @@ export default function Home() {
           buttonLink="http://www.slakeadventures.com/"
           imagePosition="right"
           bgColor="bg-white"
-          bannerStyle={true}
         />
 
         {/* Fishing Section */}
@@ -303,7 +319,6 @@ export default function Home() {
           buttonLink="https://www.facebook.com/winterfestskins/"
           imagePosition="left"
           bgColor="bg-mint-50"
-          bannerStyle={true}
           useMintButton={true}
         />
 
