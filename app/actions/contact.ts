@@ -67,7 +67,7 @@ export async function submitContactForm(prevState: ContactFormState, formData: F
       try {
         const { data, error } = await resend.emails.send({
           from: "JBay Surf Festival <contact@jbaysurffest.co.za>",
-          to: ["vangie@jbaysurffest.co.za"], // Replace with your actual email
+          to: ["kelly@jbaysurffest.co.za"], // Replace with your actual email
           subject: `New Contact Form Submission from ${rawFormData.name}`,
           reply_to: rawFormData.email,
           text: `

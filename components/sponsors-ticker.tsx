@@ -9,14 +9,17 @@ export function SponsorsTicker() {
 
   // Sample sponsor logos (using placeholders)
   const sponsors = [
-    { name: "Corona Cero", logo: "/placeholder.svg?height=60&width=180" },
-    { name: "Sponsor 2", logo: "/placeholder.svg?height=60&width=180" },
-    { name: "Sponsor 3", logo: "/placeholder.svg?height=60&width=180" },
-    { name: "Sponsor 4", logo: "/placeholder.svg?height=60&width=180" },
-    { name: "Sponsor 5", logo: "/placeholder.svg?height=60&width=180" },
-    { name: "Sponsor 6", logo: "/placeholder.svg?height=60&width=180" },
-    { name: "Sponsor 7", logo: "/placeholder.svg?height=60&width=180" },
-    { name: "Sponsor 8", logo: "/placeholder.svg?height=60&width=180" },
+    { name: "Corona Cero", logo: "/sponsors/corona.jpg" },
+    { name: "Red Bull", logo: "/sponsors/redbull.jpg" },
+    { name: "Grit", logo: "/sponsors/grit.jpg" },
+    { name: "JBay Wind Farm", logo: "/sponsors/jbaywindfarm.jpg" },
+    { name: "Kouga Municipality", logo: "/sponsors/kouga.jpg" },
+    { name: "Oakley", logo: "/sponsors/oakley.jpg" },
+    { name: "Prime Self", logo: "/sponsors/primeself.jpg" },
+    { name: "Revive", logo: "/sponsors/revive.jpg" },
+    { name: "Sealand", logo: "/sponsors/sealand.jpg" },
+    { name: "The Pound", logo: "/sponsors/thepound.jpg" },
+    { name: "Water", logo: "/sponsors/water.jpg" },
   ]
 
   // Duplicate sponsors for continuous scrolling
@@ -64,7 +67,7 @@ export function SponsorsTicker() {
                   alt={sponsor.name}
                   width={180}
                   height={60}
-                  className="h-12 md:h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="h-12 md:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                   loading="lazy"
                 />
               </div>

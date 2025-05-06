@@ -284,10 +284,10 @@ export default function Home() {
         <EventSection
           id="funduro"
           title="Embark on an Off-Road Adventure with Funduro"
-          description="Navigate challenging terrains along the Wild Coast in this exhilarating, non-competitive motorcycle ride. Funduro offers adventure enthusiasts a unique way to explore Jeffreys Bay’s natural beauty."
+          description="Join Slake Adventures at Papiesfontein for a family-friendly off-road motorbike event featuring Kiddies, Intermediate, and Pro loops. Enjoy scenic views, a 20km Core Loop, and thrilling Flat Track action with top SA riders showing off their skills. Fun for all ages!"
           images={funduroImages}
-          buttonText="Visit The Funduro"
-          buttonLink="#funduro-website"
+          buttonText="Visit Slake Adventures"
+          buttonLink="http://www.slakeadventures.com/"
           imagePosition="right"
           bgColor="bg-white"
           bannerStyle={true}
