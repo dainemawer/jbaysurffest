@@ -300,7 +300,7 @@ export default function Home() {
           description="Test your angling skills in both shore and deep-sea categories. Compete for prizes and bragging rights in Jeffreys Bay’s rich fishing waters."
           images={fishingImages}
           buttonText="Fishing Website"
-          buttonLink="#fishing-website"
+          buttonLink="https://www.facebook.com/winterfestskins/"
           imagePosition="left"
           bgColor="bg-mint-50"
           bannerStyle={true}
