@@ -124,38 +124,38 @@ export default function Home() {
         <div className="container max-w-6xl mx-auto flex h-16 items-center justify-between px-4">
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              src="/images/logo-surf-fest.png"
+              src="/images/jbay-logo-white.png"
               alt="Jeffreys Bay Surf Festival"
               width={338}
               height={168}
-              className="h-10 w-auto invert"
+              className="h-10 w-auto"
               priority
             />
           </Link>
           <div className="flex flex-row gap-8">
-            <nav className="hidden md:flex items-center space-x-6">
-              <Link href="#wsl" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+            <nav className="hidden md:mt-1 md:flex items-center space-x-6">
+              <Link href="#wsl" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
                 WSL Tour
               </Link>
-              <Link href="#parkoff" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
-                Park Off
-              </Link>
-              <Link href="#comedy" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+              <Link href="#parkoff" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
+                  Park Off
+                </Link>
+              <Link href="#comedy" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
                 Comedy Night
               </Link>
-              <Link href="#fanpark" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+              <Link href="#fanpark" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
                 Fan Park
               </Link>
-              <Link href="#mtb" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+              <Link href="#mtb" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
                 MTB
               </Link>
-              <Link href="#jiujitsu" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+              <Link href="#jiujitsu" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
                 Jiujitsu
               </Link>
-              <Link href="#funduro" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+              <Link href="#funduro" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
                 Funduro
               </Link>
-              <Link href="#fishing" className="text-white hover:text-blue-100 text-base font-heading tracking-wide">
+              <Link href="#fishing" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
                 Fishing
               </Link>
             </nav>
@@ -184,17 +184,17 @@ export default function Home() {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1>
-              <Image
-                src="/images/surf-fest-logo.png"
-                alt="Jeffreys Bay Surf Festival"
-                width={820}
-                height={418}
-                className="mx-auto mb-4"
-                priority
-              />
+                <Image
+                  src="/images/surf-fest-logo.png"
+                  alt="Jeffreys Bay Surf Festival"
+                  width={820}
+                  height={418}
+                  className="mx-auto mb-4"
+                  priority
+                />
               </h1>
-              <p className="text-xl max-w-2xl mx-auto text-blue-100 mt-8 mb-2">
-                Join us from July 11–20, 2025, at Supertubes Beach, Jeffreys Bay, for South Africa’s premier surf, music, and adventure festival. Witness world-class surfing, enjoy live music, and partake in thrilling activities along the Eastern Cape’s stunning coastline.
+              <p className="text-md md:text-xl max-w-2xl mx-auto text-blue-100 mt-8 mb-2">
+                Join us from July 11–20, 2025, at Supertubes Beach, Jeffreys Bay, for South Africa's premier surf, music, and adventure festival. Witness world-class surfing, enjoy live music, and partake in thrilling activities along the Eastern Cape's stunning coastline.
               </p>
               <div className="rounded-lg p-6 mb-4">
                 <CountdownTimer targetDate={festivalDate} />
@@ -221,8 +221,8 @@ export default function Home() {
         {/* WSL Section */}
         <EventSection
           id="wsl"
-          title="Watch the World’s Best Surfers at Supertubes"
-          description="Experience the excitement as the World Surf League’s Championship Tour returns to Jeffreys Bay. See top surfers compete on the legendary right-hand point break, delivering high-performance action in one of the world’s most iconic surf spots."
+          title="Watch the World's Best Surfers at Supertubes"
+          description="Experience the excitement as the World Surf League's Championship Tour returns to Jeffreys Bay. See top surfers compete on the legendary right-hand point break, delivering high-performance action in one of the world's most iconic surf spots."
           images={wslImages}
           logoSrc="/images/wsl-logo.png"
           logoAlt="Corona Cero"
@@ -236,7 +236,7 @@ export default function Home() {
         <EventSection
           id="parkoff"
           title="Dance to the Rhythm at Park Off Music Festival"
-          description="Immerse yourself in electrifying performances by top local and international artists. Park Off brings unforgettable music, dancing, and beach vibes to Jeffreys Bay’s shores."
+          description="Immerse yourself in electrifying performances by top local and international artists including Zakes Bantwini, Dino Moran, Dean Fuel, Niskerone, and more. Park Off brings unforgettable music, dancing, and beach vibes to Jeffreys Bay's shores."
           images={parkOffImages}
           logoSrc="/images/parkoff-logo.png"
           logoAlt="Park Off"
@@ -250,8 +250,8 @@ export default function Home() {
         {/* Comedy Night Section */}
         <EventSection
           id="comedy"
-          title="Laugh Out Loud with South Africa’s Top Comedians"
-          description="Enjoy an evening of side-splitting humor as renowned comedians take the stage. Comedy Night offers the perfect blend of laughter and entertainment amidst the festival’s vibrant atmosphere."
+          title="Laugh Out Loud with South Africa's Top Comedians"
+          description="Enjoy an evening of side-splitting humor as renowned comedians take the stage. Comedy Night offers the perfect blend of laughter and entertainment amidst the festival's vibrant atmosphere."
           images={comedyImages}
           buttonText="Buy Tickets"
           buttonLink="#tickets"
@@ -276,7 +276,7 @@ export default function Home() {
         <EventSection
           id="mtb"
           title="Conquer the Trails at the MTB Classic and Trail Run"
-          description="Challenge yourself on scenic coastal routes suitable for all skill levels. Experience the thrill of mountain biking and trail running amidst Jeffreys Bay’s breathtaking landscapes."
+          description="Challenge yourself on scenic coastal routes suitable for all skill levels. Experience the thrill of mountain biking and trail running amidst Jeffreys Bay's breathtaking landscapes."
           images={mtbImages}
           buttonText="Visit Event Website"
           buttonLink="https://jbaymtbclassic.org.za/"
@@ -313,7 +313,7 @@ export default function Home() {
         <EventSection
           id="fishing"
           title="Cast Your Line at the Annual Fishing Competition"
-          description="Test your angling skills in both shore and deep-sea categories. Compete for prizes and bragging rights in Jeffreys Bay’s rich fishing waters."
+          description="Test your angling skills with the Jbay Skins Fishing Competition. Compete for prizes and bragging rights in Jeffreys Bay's rich fishing waters."
           images={fishingImages}
           buttonText="Fishing Website"
           buttonLink="https://www.facebook.com/winterfestskins/"
@@ -387,11 +387,11 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
               <Image
-                src="/images/logo-surf-fest.png"
+                src="/images/jbay-logo-white.png"
                 alt="Jeffreys Bay Surf Festival"
                 width={338}
                 height={168}
-                className="w-auto h-14 invert mb-4"
+                className="w-auto h-14 mb-4"
               />
               <p className="text-blue-200 text-sm">
                 South Africa's premier surf, music, and adventure festival at the legendary Supertubes, Jeffreys Bay.
@@ -416,9 +416,9 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#accommodation" className="text-blue-200 hover:text-white">
+                  <a href="https://africanperfection.co.za" rel="noopener noreferrer" target="_blank" className="text-blue-200 hover:text-white">
                     Accommodation
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -436,6 +436,16 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
+                  <Link href="#comedy" className="text-blue-200 hover:text-white">
+                    Comedy Night
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#fanpark" className="text-blue-200 hover:text-white">
+                    Fan Park
+                  </Link>
+                </li>
+                <li>
                   <Link href="#mtb" className="text-blue-200 hover:text-white">
                     MTB
                   </Link>
@@ -445,12 +455,17 @@ export default function Home() {
                     Fishing
                   </Link>
                 </li>
+                <li>
+                  <Link href="#funduro" className="text-blue-200 hover:text-white">
+                    Funduro
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
               <h3 className="font-bold text-lg mb-4">Connect With Us</h3>
               <div className="flex space-x-4 mb-4">
-                <a href="https://www.instagram.com/jbaysurffestival/" className="text-blue-200 hover:text-white">
+                <a href="https://www.instagram.com/jbaysurffestival/" rel="noopener noreferrer" target="_blank" className="text-blue-200 hover:text-white">
                   <span className="sr-only">Instagram</span>
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path

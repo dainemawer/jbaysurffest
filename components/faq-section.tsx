@@ -15,22 +15,22 @@ export function FaqSection() {
     {
       question: "When and where is the Jeffreys Bay Surf Festival?",
       answer:
-        "The Jeffreys Bay Surf Festival will take place from May 15-22, 2025, at Supertubes Beach in Jeffreys Bay, Eastern Cape, South Africa.",
+        "The Jeffreys Bay Surf Festival will take place from May 11-20, 2025, at Supertubes in Jeffreys Bay, Eastern Cape, South Africa.",
     },
     {
       question: "How can I purchase tickets?",
       answer:
-        "Tickets can be purchased online through our official website or at selected retail outlets across South Africa. We offer different ticket options including day passes, weekend passes, and full festival passes.",
+        "Tickets can be purchased online through our official website through AirDosh. We offer different ticket options including day passes, weekend passes, and full festival passes.",
     },
     {
       question: "Is there accommodation available nearby?",
       answer:
-        "Yes, Jeffreys Bay offers a wide range of accommodation options from luxury hotels to budget-friendly backpackers. We recommend booking early as accommodation fills up quickly during the festival period.",
+        "Yes, Jeffreys Bay offers a wide range of accommodation options from luxury boutique hotels to budget-friendly backpackers. We recommend booking early as accommodation fills up quickly during the festival period.",
     },
     {
       question: "Can I participate in the sporting events?",
       answer:
-        "Yes! Many of our events like the MTB competition, Jiujitsu tournament, and fishing competition are open to public participation. Registration details for each event can be found on their respective pages on our website.",
+        "Yes! Many of our events like the MTB competition, Jiujitsu tournament, and fishing competition are open to public participation. Registration details for each event can be found on their respective sections of the website.",
     },
     {
       question: "What should I bring to the festival?",

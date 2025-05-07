@@ -115,7 +115,7 @@ export function EventSection({
               order-2
             `}
           >
-            <ImageSlideshow images={images} alt={title} aspectRatio={bannerStyle ? "banner" : "standard"} />
+            <ImageSlideshow images={images} alt={title} />
           </div>
         </div>
       </div>

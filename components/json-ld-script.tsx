@@ -19,7 +19,7 @@ export function JsonLdScript() {
         addressCountry: "ZA",
       },
     },
-    image: ["https://www.jbaysurffest.co.za/images/festival-2025.jpg"],
+    image: ["https://www.jbaysurffest.co.za/images/wsl/wsl-4.jpg"],
     offers: {
       "@type": "Offer",
       url: "https://airdosh.co.za/#/",

@@ -53,9 +53,9 @@ export function SponsorsTicker() {
         <h2 className="text-3xl md:text-4xl font-heading text-center text-gray-900 mb-8">Proudly Supported by Our Valued Sponsors</h2>
         <div className="relative overflow-hidden" ref={scrollRef}>
           <div
-            className={`flex items-center space-x-12 py-6 ${isVisible ? "animate-marquee" : ""}`}
+            className={`flex items-center space-x-12 ${isVisible ? "animate-marquee" : ""}`}
             style={{
-              animationDuration: "30s",
+              animationDuration: "15s",
               animationIterationCount: "infinite",
               animationTimingFunction: "linear",
             }}
@@ -67,7 +67,7 @@ export function SponsorsTicker() {
                   alt={sponsor.name}
                   width={180}
                   height={60}
-                  className="h-12 md:h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  className="h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
                   loading="lazy"
                 />
               </div>

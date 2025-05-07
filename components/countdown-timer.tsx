@@ -44,27 +44,27 @@ export function CountdownTimer({ targetDate }: CountdownTimerProps) {
   }, [targetDate])
 
   return (
-    <div className="flex flex-row gap-2 md:gap-14 justify-center text-center">
+    <div className="flex flex-row gap-4 md:gap-14 justify-center text-center">
       <div className="flex flex-col">
-        <div className="text-white text-2xl md:text-6xl font-heading">
+        <div className="text-white text-4xl md:text-6xl font-heading">
           {timeLeft.days}
         </div>
         <span className="text-blue-100 text-xs md:text-sm mt-1">Days</span>
       </div>
       <div className="flex flex-col">
-        <div className="text-white text-2xl md:text-6xl font-heading">
+        <div className="text-white text-4xl md:text-6xl font-heading">
           {timeLeft.hours}
         </div>
         <span className="text-blue-100 text-xs md:text-sm mt-1">Hours</span>
       </div>
       <div className="flex flex-col">
-        <div className="text-white text-2xl md:text-6xl font-heading">
+        <div className="text-white text-4xl md:text-6xl font-heading">
           {timeLeft.minutes}
         </div>
         <span className="text-blue-100 text-xs md:text-sm mt-1">Minutes</span>
       </div>
       <div className="flex flex-col">
-        <div className="text-white text-2xl md:text-6xl font-heading">
+        <div className="text-white text-4xl md:text-6xl font-heading">
           {timeLeft.seconds}
         </div>
         <span className="text-blue-100 text-xs md:text-sm mt-1">Seconds</span>
