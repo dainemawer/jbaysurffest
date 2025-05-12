@@ -15,7 +15,7 @@ export function FaqSection() {
     {
       question: "When and where is the Jeffreys Bay Surf Festival?",
       answer:
-        "The Jeffreys Bay Surf Festival will take place from May 11-20, 2025, at Supertubes in Jeffreys Bay, Eastern Cape, South Africa.",
+        "The Jeffreys Bay Surf Festival will take place from 11-20 July, 2025, at Supertubes in Jeffreys Bay, Eastern Cape, South Africa.",
     },
     {
       question: "How can I purchase tickets?",
