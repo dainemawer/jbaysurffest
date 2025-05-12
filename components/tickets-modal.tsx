@@ -57,24 +57,6 @@ export function TicketsModal({ isOpen, onClose }: TicketsModalProps) {
             </div>
           </div>
 
-          <div className="bg-blue-50 p-4 rounded-md mb-6">
-            <h3 className="font-heading text-xl text-blue-800 mb-2">Ticket Options</h3>
-            <ul className="space-y-2 text-blue-700">
-              <li className="flex justify-between">
-                <span>Full Festival Pass</span>
-                <span className="font-bold">R1,200</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Weekend Pass</span>
-                <span className="font-bold">R800</span>
-              </li>
-              <li className="flex justify-between">
-                <span>Day Pass</span>
-                <span className="font-bold">R350</span>
-              </li>
-            </ul>
-          </div>
-
           <p className="text-sm text-gray-500 mb-6">
             After scanning, you'll be directed to <a href="https://airdosh.co.za/">AirDosh's</a> secure payment platform to complete your purchase. Tickets
             will be delivered to your email.

@@ -161,12 +161,6 @@ export default function Home() {
             </nav>
             <div className="flex items-center space-x-4">
               <button
-                onClick={handleTicketButtonClick}
-                className="hidden md:inline-flex h-10 items-center justify-center rounded-md bg-[#f18a50] px-5 py-2 text-base font-heading text-white shadow transition-colors hover:bg-[#e07a40]"
-              >
-                Get Tickets
-              </button>
-              <button
                 className="md:hidden text-white p-1 hover:bg-blue-600 rounded-md transition-colors"
                 aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -200,15 +194,9 @@ export default function Home() {
                 <CountdownTimer targetDate={festivalDate} />
               </div>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <button
-                  onClick={handleTicketButtonClick}
-                  className="inline-flex h-14 items-center justify-center rounded-md bg-[#f18a50] px-8 py-4 text-lg font-heading text-white shadow transition-colors hover:bg-[#e07a40]"
-                >
-                  Get Tickets
-                </button>
                 <Link
                   href="#schedule"
-                  className="inline-flex h-14 items-center justify-center rounded-md border border-white bg-transparent px-8 py-4 text-lg font-heading text-white shadow-sm transition-colors hover:bg-white/10"
+                  className="inline-flex text-2xl h-14 items-center justify-center rounded-md border border-white bg-transparent px-8 py-4 font-heading text-white shadow-sm transition-colors hover:bg-white/10"
                 >
                   View Schedule
                 </Link>
@@ -363,22 +351,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
-        <section className="bg-blue-600 py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl md:text-5xl font-heading text-white mb-6">Don't Miss Out on the Action!</h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Secure your tickets now for South Africa's most exciting surf and lifestyle festival.
-            </p>
-            <button
-              onClick={handleTicketButtonClick}
-              className="inline-flex h-14 items-center justify-center rounded-md bg-mint-300 px-10 py-4 text-xl font-heading text-white shadow transition-colors hover:bg-mint-400"
-            >
-              Get Your Tickets
-            </button>
-          </div>
-        </section>
       </main>
 
       {/* Footer */}
@@ -404,11 +376,6 @@ export default function Home() {
                   <Link href="#" className="text-blue-200 hover:text-white">
                     Home
                   </Link>
-                </li>
-                <li>
-                  <button onClick={handleTicketButtonClick} className="text-blue-200 hover:text-white">
-                    Tickets
-                  </button>
                 </li>
                 <li>
                   <Link href="#schedule" className="text-blue-200 hover:text-white">
