@@ -1,20 +1,13 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 
 interface CountdownTimerProps {
   targetDate: Date
 }
 
-interface TimeLeft {
-  days: number
-  hours: number
-  minutes: number
-  seconds: number
-}
-
 export function CountdownTimer({ targetDate }: CountdownTimerProps) {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+  const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
@@ -24,50 +17,49 @@ export function CountdownTimer({ targetDate }: CountdownTimerProps) {
   useEffect(() => {
     const calculateTimeLeft = () => {
       const difference = targetDate.getTime() - new Date().getTime()
+      let timeLeft = {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+      }
 
       if (difference > 0) {
-        setTimeLeft({
+        timeLeft = {
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
           hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
           minutes: Math.floor((difference / 1000 / 60) % 60),
           seconds: Math.floor((difference / 1000) % 60),
-        })
-      } else {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+        }
       }
+
+      return timeLeft
     }
 
-    calculateTimeLeft()
-    const timer = setInterval(calculateTimeLeft, 1000)
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft())
+    }, 1000)
 
     return () => clearInterval(timer)
   }, [targetDate])
 
   return (
-    <div className="flex flex-row gap-4 md:gap-14 justify-center text-center">
-      <div className="flex flex-col">
-        <div className="text-white text-4xl md:text-6xl font-heading">
-          {timeLeft.days}
-        </div>
-        <span className="text-blue-100 text-xs md:text-sm mt-1">Days</span>
+    <div className="flex gap-6">
+      <div>
+        <div className="text-5xl md:text-6xl font-bold text-white">{timeLeft.days}</div>
+        <div className="text-base text-white/80 uppercase tracking-wider">Days</div>
       </div>
-      <div className="flex flex-col">
-        <div className="text-white text-4xl md:text-6xl font-heading">
-          {timeLeft.hours}
-        </div>
-        <span className="text-blue-100 text-xs md:text-sm mt-1">Hours</span>
+      <div>
+        <div className="text-5xl md:text-6xl font-bold text-white">{timeLeft.hours}</div>
+        <div className="text-base text-white/80 uppercase tracking-wider">Hours</div>
       </div>
-      <div className="flex flex-col">
-        <div className="text-white text-4xl md:text-6xl font-heading">
-          {timeLeft.minutes}
-        </div>
-        <span className="text-blue-100 text-xs md:text-sm mt-1">Minutes</span>
+      <div>
+        <div className="text-5xl md:text-6xl font-bold text-white">{timeLeft.minutes}</div>
+        <div className="text-base text-white/80 uppercase tracking-wider">Minutes</div>
       </div>
-      <div className="flex flex-col">
-        <div className="text-white text-4xl md:text-6xl font-heading">
-          {timeLeft.seconds}
-        </div>
-        <span className="text-blue-100 text-xs md:text-sm mt-1">Seconds</span>
+      <div>
+        <div className="text-5xl md:text-6xl font-bold text-white">{timeLeft.seconds}</div>
+        <div className="text-base text-white/80 uppercase tracking-wider">Seconds</div>
       </div>
     </div>
   )

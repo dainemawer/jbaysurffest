@@ -6,13 +6,15 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { CountdownTimer } from "@/components/countdown-timer"
-import { EventSection } from "@/components/event-section"
+import { EventSection } from "@/components/event-section-new"
 import { MobileMenu } from "@/components/mobile-menu"
 import { Menu, X } from "lucide-react"
 import { SponsorsTicker } from "@/components/sponsors-ticker"
 import { FaqSection } from "@/components/faq-section"
 import { ContactForm } from "@/components/contact-form"
 import { TicketsModal } from "@/components/tickets-modal"
+import { VideoBackground } from "@/components/video-background"
+import { motion } from "framer-motion"
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -20,6 +22,44 @@ export default function Home() {
 
   // Festival date - May 15, 2025
   const festivalDate = new Date("2025-07-11T09:00:00")
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.22, 1, 0.36, 1]
+      }
+    },
+  }
+
+  const staggerContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  }
+
+  // Handle header sticky behavior
+  useEffect(() => {
+    const header = document.querySelector('header')
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        header?.classList.add('sticky')
+      } else {
+        header?.classList.remove('sticky')
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   // Function to handle ticket button clicks
   const handleTicketButtonClick = (e: React.MouseEvent) => {
@@ -52,7 +92,6 @@ export default function Home() {
     "images/wsl/wsl-6.jpg",
     "images/wsl/wsl-7.jpg",
     "images/wsl/wsl-8.jpg",
-    "images/wsl/wsl-9.jpg",
   ]
 
   const parkOffImages = [
@@ -120,48 +159,48 @@ export default function Home() {
       <TicketsModal isOpen={ticketsModalOpen} onClose={() => setTicketsModalOpen(false)} />
 
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-blue-500/95 backdrop-blur-sm">
-        <div className="container max-w-6xl mx-auto flex h-16 items-center justify-between px-4">
+      <header className="absolute top-0 left-0 right-0 z-50 transition-all duration-300 [&.sticky]:fixed [&.sticky]:bg-white/80 [&.sticky]:backdrop-blur-sm [&.sticky]:h-16">
+        <div className="container max-w-7xl mx-auto flex h-24 [.sticky_&]:h-16 items-center justify-between px-4 transition-all duration-300">
           <Link href="/" className="flex items-center space-x-2">
             <Image
               src="/images/jbay-logo-white.png"
               alt="Jeffreys Bay Surf Festival"
               width={338}
               height={168}
-              className="h-10 w-auto"
+              className="h-10 w-auto transition-all duration-300 [.sticky_&]:h-8 [.sticky_&]:invert"
               priority
             />
           </Link>
           <div className="flex flex-row gap-8">
             <nav className="hidden md:mt-1 md:flex items-center space-x-6">
-              <Link href="#wsl" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
+              <Link href="#wsl" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
                 WSL Tour
               </Link>
-              <Link href="#parkoff" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
-                  Park Off
-                </Link>
-              <Link href="#comedy" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
+              <Link href="#parkoff" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
+                Park Off
+              </Link>
+              <Link href="#comedy" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
                 Comedy Night
               </Link>
-              <Link href="#fanpark" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
+              <Link href="#fanpark" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
                 Fan Park
               </Link>
-              <Link href="#mtb" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
+              <Link href="#mtb" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
                 MTB
               </Link>
-              <Link href="#jiujitsu" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
+              <Link href="#jiujitsu" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
                 Jiujitsu
               </Link>
-              <Link href="#funduro" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
+              <Link href="#funduro" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
                 Funduro
               </Link>
-              <Link href="#fishing" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-base font-heading tracking-wide">
+              <Link href="#fishing" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
                 Fishing
               </Link>
             </nav>
             <div className="flex items-center space-x-4">
               <button
-                className="md:hidden text-white p-1 hover:bg-blue-600 rounded-md transition-colors"
+                className="md:hidden text-white p-1 hover:bg-white/10 rounded-md transition-colors [.sticky_&]:text-black [.sticky_&]:hover:bg-black/10"
                 aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
@@ -174,36 +213,52 @@ export default function Home() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative bg-blue-500 py-20 md:py-16">
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1>
-                <Image
-                  src="/images/surf-fest-logo.png"
-                  alt="Jeffreys Bay Surf Festival"
-                  width={820}
-                  height={418}
-                  className="mx-auto mb-4"
-                  priority
-                />
-              </h1>
-              <p className="text-md md:text-xl max-w-2xl mx-auto text-blue-100 mt-8 mb-2">
-                Join us from July 11–20, 2025, at Supertubes Beach, Jeffreys Bay, for South Africa's premier surf, music, and adventure festival. Witness world-class surfing, enjoy live music, and partake in thrilling activities along the Eastern Cape's stunning coastline.
-              </p>
-              <div className="rounded-lg p-6 mb-4">
+        <section className="relative h-screen flex items-center justify-center overflow-hidden">
+          {/* Video Background */}
+          <VideoBackground
+            videoSrc="/images/surfing-background.mp4"
+            posterSrc="/images/hero-poster.jpg"
+          />
+
+          {/* Content */}
+          <div className="container max-w-7xl mx-auto px-4 relative z-10 pt-16">
+            <motion.div
+              className="max-w-4xl"
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+            >
+              <motion.h1
+                className="text-6xl md:text-8xl font-heading text-white mb-6 drop-shadow-lg leading-tight"
+                variants={fadeInUp}
+              >
+                Ride the Wave of Adventure
+              </motion.h1>
+              <motion.p
+                className="text-xl md:text-2xl text-white mb-8 max-w-2xl drop-shadow-md"
+                variants={fadeInUp}
+              >
+                Join us from July 11–20, 2025, at Supertubes Beach, Jeffreys Bay, for South Africa's premier surf, music, and adventure festival.
+              </motion.p>
+              <motion.div
+                className="mb-8"
+                variants={fadeInUp}
+              >
                 <CountdownTimer targetDate={festivalDate} />
-              </div>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
+              </motion.div>
+              <motion.div
+                className="flex flex-col sm:flex-row gap-4"
+                variants={fadeInUp}
+              >
                 <Link
                   href="#schedule"
-                  className="inline-flex text-2xl h-14 items-center justify-center rounded-md border border-white bg-transparent px-8 py-4 font-heading text-white shadow-sm transition-colors hover:bg-white/10"
+                  className="inline-flex text-2xl h-14 items-center justify-center rounded-md border-2 border-white bg-white/10 backdrop-blur-sm px-8 py-4 font-heading text-white shadow-sm transition-colors hover:bg-white/20"
                 >
                   View Schedule
                 </Link>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-b from-blue-600 to-blue-500 opacity-50"></div>
         </section>
 
         {/* WSL Section */}
@@ -218,6 +273,7 @@ export default function Home() {
           buttonLink="https://www.worldsurfleague.com"
           imagePosition="right"
           bgColor="bg-white"
+          posterImage="/images/wsl-poster.png"
         />
 
         {/* Park Off Section */}
@@ -231,8 +287,9 @@ export default function Home() {
           buttonText="Buy Tickets"
           buttonLink="#tickets"
           imagePosition="left"
-          bgColor="bg-mint-50"
+          bgColor="bg-gray-50"
           useMintButton={true}
+          videoBackground="/images/video-background.mp4"
         />
 
         {/* Comedy Night Section */}
@@ -256,7 +313,7 @@ export default function Home() {
           buttonText="View Schedule"
           buttonLink="#schedule"
           imagePosition="left"
-          bgColor="bg-mint-50"
+          bgColor="bg-gray-50"
           useMintButton={true}
         />
 
@@ -281,7 +338,7 @@ export default function Home() {
           buttonText="Tournament Info"
           buttonLink="#jiujitsu-info"
           imagePosition="left"
-          bgColor="bg-mint-50"
+          bgColor="bg-gray-50"
           useMintButton={true}
         />
 
@@ -306,7 +363,7 @@ export default function Home() {
           buttonText="Fishing Website"
           buttonLink="https://www.facebook.com/winterfestskins/"
           imagePosition="left"
-          bgColor="bg-mint-50"
+          bgColor="bg-gray-50"
           useMintButton={true}
         />
 
@@ -317,44 +374,21 @@ export default function Home() {
         <FaqSection />
 
         {/* Contact Form Section */}
-        <section className="py-16 md:py-24 bg-mint-50">
+        <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                <h2 className="text-4xl md:text-5xl font-heading text-gray-900 mb-6">Get In Touch</h2>
-                <p className="text-xl text-gray-600 mb-8">
-                  Have questions or need assistance? Reach out to our team for inquiries about the festival, sponsorship opportunities, or general information.
-                </p>
-                <div className="flex items-center space-x-4 text-mint-600">
-                  <div className="bg-mint-200 p-3 rounded-full">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                      <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                  </div>
-                  <span className="text-gray-700">We'll get back to you as soon as possible.</span>
-                </div>
-              </div>
-              <div>
-                <ContactForm />
-              </div>
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-5xl md:text-6xl font-heading text-gray-900 mb-6">Get In Touch</h2>
+              <p className="text-xl md:text-2xl text-gray-600 mb-12">
+                Have questions or need assistance? Reach out to our team for inquiries about the festival, sponsorship opportunities, or general information.
+              </p>
+              <ContactForm />
             </div>
           </div>
         </section>
       </main>
 
       {/* Footer */}
-      <footer className="bg-blue-900 text-white py-12">
+      <footer className="bg-black text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -365,7 +399,7 @@ export default function Home() {
                 height={168}
                 className="w-auto h-14 mb-4"
               />
-              <p className="text-blue-200 text-sm">
+              <p className="text-white text-sm">
                 South Africa's premier surf, music, and adventure festival at the legendary Supertubes, Jeffreys Bay.
               </p>
             </div>
@@ -373,17 +407,17 @@ export default function Home() {
               <h3 className="font-bold text-lg mb-4">Quick Links</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#" className="text-blue-200 hover:text-white">
+                  <Link href="#" className="text-white hover:text-gray-200">
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="#schedule" className="text-blue-200 hover:text-white">
+                  <Link href="#schedule" className="text-white hover:text-gray-200">
                     Schedule
                   </Link>
                 </li>
                 <li>
-                  <a href="https://africanperfection.co.za" rel="noopener noreferrer" target="_blank" className="text-blue-200 hover:text-white">
+                  <a href="https://africanperfection.co.za" rel="noopener noreferrer" target="_blank" className="text-white hover:text-gray-200">
                     Accommodation
                   </a>
                 </li>
@@ -393,37 +427,37 @@ export default function Home() {
               <h3 className="font-bold text-lg mb-4">Events</h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="#wsl" className="text-blue-200 hover:text-white">
+                  <Link href="#wsl" className="text-white hover:text-gray-200">
                     WSL Tour
                   </Link>
                 </li>
                 <li>
-                  <Link href="#parkoff" className="text-blue-200 hover:text-white">
+                  <Link href="#parkoff" className="text-white hover:text-gray-200">
                     Park Off
                   </Link>
                 </li>
                 <li>
-                  <Link href="#comedy" className="text-blue-200 hover:text-white">
+                  <Link href="#comedy" className="text-white hover:text-gray-200">
                     Comedy Night
                   </Link>
                 </li>
                 <li>
-                  <Link href="#fanpark" className="text-blue-200 hover:text-white">
+                  <Link href="#fanpark" className="text-white hover:text-gray-200">
                     Fan Park
                   </Link>
                 </li>
                 <li>
-                  <Link href="#mtb" className="text-blue-200 hover:text-white">
+                  <Link href="#mtb" className="text-white hover:text-gray-200">
                     MTB
                   </Link>
                 </li>
                 <li>
-                  <Link href="#fishing" className="text-blue-200 hover:text-white">
+                  <Link href="#fishing" className="text-white hover:text-gray-200">
                     Fishing
                   </Link>
                 </li>
                 <li>
-                  <Link href="#funduro" className="text-blue-200 hover:text-white">
+                  <Link href="#funduro" className="text-white hover:text-gray-200">
                     Funduro
                   </Link>
                 </li>
@@ -432,7 +466,7 @@ export default function Home() {
             <div>
               <h3 className="font-bold text-lg mb-4">Connect With Us</h3>
               <div className="flex space-x-4 mb-4">
-                <a href="https://www.instagram.com/jbaysurffestival/" rel="noopener noreferrer" target="_blank" className="text-blue-200 hover:text-white">
+                <a href="https://www.instagram.com/jbaysurffestival/" rel="noopener noreferrer" target="_blank" className="text-white hover:text-gray-200">
                   <span className="sr-only">Instagram</span>
                   <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path
@@ -443,10 +477,10 @@ export default function Home() {
                   </svg>
                 </a>
               </div>
-              <p className="text-sm text-blue-200">Follow us for updates and giveaways!</p>
+              <p className="text-sm text-white">Follow us for updates and giveaways!</p>
             </div>
           </div>
-          <div className="border-t border-blue-800 mt-8 pt-8 text-center text-sm text-blue-300">
+          <div className="border-t border-white mt-8 pt-8 text-center text-sm text-white">
             <p>© {new Date().getFullYear()} Jeffreys Bay Surf Festival. All rights reserved.</p>
           </div>
         </div>

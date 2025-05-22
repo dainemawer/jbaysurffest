@@ -48,7 +48,7 @@ export function EventSection({
 
   // Determine if we should swap columns on desktop
   const shouldSwapColumns =
-    bgColor === "bg-mint-50" && !bannerStyle;
+    bgColor === "bg-gray-50" && !bannerStyle;
 
   return (
     <section id={id} className={`py-16 md:py-24 ${bgColor} content-visibility-auto`}>

@@ -1,82 +1,87 @@
 "use client"
 
 import { useState } from "react"
-import { ChevronDown, ChevronUp } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import { ChevronDown } from "lucide-react"
 
-interface FaqItem {
+interface FAQItem {
   question: string
   answer: string
 }
 
-export function FaqSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
-
-  const faqs: FaqItem[] = [
-    {
-      question: "When and where is the Jeffreys Bay Surf Festival?",
-      answer:
-        "The Jeffreys Bay Surf Festival will take place from 11-20 July, 2025, at Supertubes in Jeffreys Bay, Eastern Cape, South Africa.",
-    },
-    {
-      question: "How can I purchase tickets?",
-      answer:
-        "Tickets can be purchased online through our official website through AirDosh. We offer different ticket options including day passes, weekend passes, and full festival passes.",
-    },
-    {
-      question: "Is there accommodation available nearby?",
-      answer:
-        "Yes, Jeffreys Bay offers a wide range of accommodation options from luxury boutique hotels to budget-friendly backpackers. We recommend booking early as accommodation fills up quickly during the festival period.",
-    },
-    {
-      question: "Can I participate in the sporting events?",
-      answer:
-        "Yes! Many of our events like the MTB competition, Jiujitsu tournament, and fishing competition are open to public participation. Registration details for each event can be found on their respective sections of the website.",
-    },
-    {
-      question: "What should I bring to the festival?",
-      answer:
-        "We recommend bringing sunscreen, a hat, comfortable clothing, and a reusable water bottle. For specific events, additional equipment may be required - please check the individual event pages for details.",
-    },
-    {
-      question: "Is the festival family-friendly?",
-      answer:
-        "We have activities for all ages at our Fan Park, and children under 12 receive discounted entry. Please note that some evening events may have age restrictions.",
-    },
-  ]
-
-  const toggleFaq = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index)
+const faqs: FAQItem[] = [
+  {
+    question: "When and where is the festival taking place?",
+    answer: "The Jeffreys Bay Surf Festival will be held from July 11-20, 2025, at Supertubes Beach in Jeffreys Bay, South Africa."
+  },
+  {
+    question: "How can I purchase tickets?",
+    answer: "Tickets can be purchased through our website. We offer various ticket options including day passes, weekend passes, and full festival passes. Early bird tickets will be available soon."
+  },
+  {
+    question: "What events are included in the festival?",
+    answer: "The festival includes the WSL Championship Tour, Park Off Music Festival, Comedy Night, Fan Park activities, MTB Classic, Jiujitsu Tournament, Funduro, and the Fishing Competition."
+  },
+  {
+    question: "Is there accommodation available nearby?",
+    answer: "Yes, there are numerous accommodation options in Jeffreys Bay ranging from hotels to guesthouses and self-catering apartments. We recommend booking early as the town gets busy during the festival."
+  },
+  {
+    question: "Are there activities for children?",
+    answer: "Yes, the Fan Park offers family-friendly activities, and many events are suitable for all ages. The MTB Classic includes a kiddies loop, and the Funduro event has family-friendly options."
+  },
+  {
+    question: "What should I bring to the festival?",
+    answer: "Bring sunscreen, a hat, comfortable clothing, and a beach towel. For specific events like the MTB Classic or Funduro, check the event details for required equipment."
   }
+]
+
+export function FaqSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-gray-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-heading text-gray-900 mb-4">Frequently Asked Questions</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Find all the information you need about dates, tickets, accommodations, event participation, and more to make the most of your festival experience.
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-5xl md:text-6xl font-heading text-gray-900 mb-6">Frequently Asked Questions</h2>
+          <p className="text-xl md:text-2xl text-gray-600 mb-12">
+            Find answers to common questions about the festival, tickets, accommodation, and more.
           </p>
-        </div>
-
-        <div className="max-w-3xl mx-auto divide-y divide-gray-200">
-          {faqs.map((faq, index) => (
-            <div key={index} className="py-5">
-              <button
-                onClick={() => toggleFaq(index)}
-                className="flex w-full justify-between items-center text-left focus:outline-none"
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="border border-gray-200 rounded-lg overflow-hidden"
               >
-                <h3 className="text-xl font-heading text-gray-900">{faq.question}</h3>
-                <span className="ml-6 flex-shrink-0 text-mint-600">
-                  {openIndex === index ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
-                </span>
-              </button>
-              {openIndex === index && (
-                <div className="mt-3 pr-12">
-                  <p className="text-gray-600">{faq.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
+                <button
+                  className="w-full px-6 py-4 text-left flex items-center justify-between bg-white hover:bg-gray-50 transition-colors"
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                >
+                  <span className="text-lg md:text-xl font-medium text-gray-900">{faq.question}</span>
+                  <ChevronDown
+                    className={`w-5 h-5 text-gray-500 transition-transform ${
+                      openIndex === index ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="px-6 py-4 bg-white border-t border-gray-200">
+                        <p className="text-gray-600 text-lg md:text-xl text-left">{faq.answer}</p>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
