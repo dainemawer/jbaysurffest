@@ -126,9 +126,9 @@ export function EventSection({
                     <Image
                       src={logoSrc}
                       alt={logoAlt || title}
-                      width={110}
-                      height={33}
-                      className="h-8 w-auto object-contain mx-auto invert"
+                      width={120}
+                      height={40}
+                      className="h-10 w-auto object-contain mx-auto invert"
                       loading="lazy"
                     />
                   </motion.div>

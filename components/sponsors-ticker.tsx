@@ -20,6 +20,13 @@ export function SponsorsTicker() {
     { name: "Sealand", logo: "/images/sponsors/sealand.jpg" },
     { name: "The Pound", logo: "/images/sponsors/thepound.jpg" },
     { name: "Water", logo: "/images/sponsors/water.jpg" },
+    { name: "Betify", logo: "/images/sponsors/betify.jpg" },
+    { name: "Iglu", logo: "/images/sponsors/iglu.jpg" },
+    { name: "Ocean Freedom", logo: "/images/sponsors/ocean-freedom.jpg" },
+    { name: "Patagonia", logo: "/images/sponsors/patagonia.jpg" },
+    { name: "Stance", logo: "/images/sponsors/stance.jpg" },
+    { name: "Surfline", logo: "/images/sponsors/surfline.jpg" },
+    { name: "Yeti", logo: "/images/sponsors/yeti.jpg" },
   ]
 
   // Duplicate sponsors for continuous scrolling

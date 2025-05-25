@@ -92,6 +92,8 @@ export default function Home() {
     "images/wsl/wsl-6.jpg",
     "images/wsl/wsl-7.jpg",
     "images/wsl/wsl-8.jpg",
+    "images/wsl/wsl-9.jpg",
+    "images/wsl/wsl-10.jpg",
   ]
 
   const parkOffImages = [
@@ -101,6 +103,10 @@ export default function Home() {
     "/images/parkoff/parkoff-4.jpg",
     "/images/parkoff/parkoff-5.jpg",
     "/images/parkoff/parkoff-6.jpg",
+    "/images/parkoff/parkoff-7.jpg",
+    "/images/parkoff/parkoff-8.jpg",
+    "/images/parkoff/parkoff-9.jpg",
+    "/images/parkoff/parkoff-10.jpg",
   ]
 
   const comedyImages = [
@@ -110,16 +116,10 @@ export default function Home() {
     "/images/comedy/comedy-4.jpg",
     "/images/comedy/comedy-5.jpg",
     "/images/comedy/comedy-6.jpg",
-  ]
-
-  const fanParkImages = [
-    "/images/fanpark/fanpark-1.jpg",
-    "/images/fanpark/fanpark-2.jpg",
-    "/images/fanpark/fanpark-3.jpg",
-    "/images/fanpark/fanpark-4.jpg",
-    "/images/fanpark/fanpark-5.jpg",
-    "/images/fanpark/fanpark-6.jpg",
-    "/images/fanpark/fanpark-7.jpg",
+    "/images/comedy/comedy-7.jpg",
+    "/images/comedy/comedy-8.jpg",
+    "/images/comedy/comedy-9.jpg",
+    "/images/comedy/comedy-10.jpg",
   ]
 
   const mtbImages = [
@@ -127,6 +127,12 @@ export default function Home() {
     "/images/mtb/mtb-2.jpg",
     "/images/mtb/mtb-3.jpg",
     "/images/mtb/mtb-4.jpg",
+    "/images/mtb/mtb-5.jpg",
+    "/images/mtb/mtb-6.jpg",
+    "/images/mtb/mtb-7.jpg",
+    "/images/mtb/mtb-8.jpg",
+    "/images/mtb/mtb-9.jpg",
+    "/images/mtb/mtb-10.jpg",
   ]
 
   const jiujitsuImages = [
@@ -134,6 +140,12 @@ export default function Home() {
     "/images/jiu/jiu-2.jpg",
     "/images/jiu/jiu-3.jpg",
     "/images/jiu/jiu-4.jpg",
+    "/images/jiu/jiu-5.jpg",
+    "/images/jiu/jiu-6.jpg",
+    "/images/jiu/jiu-7.jpg",
+    "/images/jiu/jiu-8.jpg",
+    "/images/jiu/jiu-9.jpg",
+    "/images/jiu/jiu-10.jpg",
   ]
 
   const funduroImages = [
@@ -141,6 +153,12 @@ export default function Home() {
     "/images/funduro/funduro-2.jpg",
     "/images/funduro/funduro-3.jpg",
     "/images/funduro/funduro-4.jpg",
+    "/images/funduro/funduro-5.jpg",
+    "/images/funduro/funduro-6.jpg",
+    "/images/funduro/funduro-7.jpg",
+    "/images/funduro/funduro-8.jpg",
+    "/images/funduro/funduro-9.jpg",
+    "/images/funduro/funduro-10.jpg",
   ]
 
   const fishingImages = [
@@ -148,6 +166,38 @@ export default function Home() {
     "/images/fishing/fishing-2.jpg",
     "/images/fishing/fishing-3.jpg",
     "/images/fishing/fishing-4.jpg",
+    "/images/fishing/fishing-5.jpg",
+    "/images/fishing/fishing-6.jpg",
+    "/images/fishing/fishing-7.jpg",
+    "/images/fishing/fishing-8.jpg",
+    "/images/fishing/fishing-9.jpg",
+    "/images/fishing/fishing-10.jpg",
+  ]
+
+  const touchImages = [
+    "/images/touchies/touchies-1.jpg",
+    "/images/touchies/touchies-2.jpg",
+    "/images/touchies/touchies-3.jpg",
+    "/images/touchies/touchies-4.jpg",
+    "/images/touchies/touchies-5.jpg",
+    "/images/touchies/touchies-6.jpg",
+    "/images/touchies/touchies-7.jpg",
+    "/images/touchies/touchies-8.jpg",
+    "/images/touchies/touchies-9.jpg",
+    "/images/touchies/touchies-10.jpg",
+  ]
+
+  const xOverImages = [
+    "/images/x-over/x-over-1.jpg",
+    "/images/x-over/x-over-2.jpg",
+    "/images/x-over/x-over-3.jpg",
+    "/images/x-over/x-over-4.jpg",
+    "/images/x-over/x-over-5.jpg",
+    "/images/x-over/x-over-6.jpg",
+    "/images/x-over/x-over-7.jpg",
+    "/images/x-over/x-over-8.jpg",
+    "/images/x-over/x-over-9.jpg",
+    "/images/x-over/x-over-10.jpg",
   ]
 
   return (
@@ -172,7 +222,7 @@ export default function Home() {
             />
           </Link>
           <div className="flex flex-row gap-8">
-            <nav className="hidden md:mt-1 md:flex items-center space-x-6">
+            <nav className="hidden lg:mt-1 lg:flex items-center space-x-6">
               <Link href="#wsl" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
                 WSL Tour
               </Link>
@@ -197,10 +247,16 @@ export default function Home() {
               <Link href="#fishing" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
                 Fishing
               </Link>
+              <Link href="#touchies" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
+                Touchies
+              </Link>
+              <Link href="#x-over" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
+                X-Over
+              </Link>
             </nav>
             <div className="flex items-center space-x-4">
               <button
-                className="md:hidden text-white p-1 hover:bg-white/10 rounded-md transition-colors [.sticky_&]:text-black [.sticky_&]:hover:bg-black/10"
+                className="lg:hidden text-white p-1 hover:bg-white/10 rounded-md transition-colors [.sticky_&]:text-black [.sticky_&]:hover:bg-black/10"
                 aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               >
@@ -300,21 +356,8 @@ export default function Home() {
           images={comedyImages}
           buttonText="Buy Tickets"
           buttonLink="#tickets"
-          imagePosition="right"
-          bgColor="bg-white"
-        />
-
-        {/* Fan Park Section */}
-        <EventSection
-          id="fanpark"
-          title="Explore the Heartbeat of the Festival at Fan Park"
-          description="Discover a hub of excitement with food vendors, merchandise stalls, athlete meet-and-greets, live surf broadcasts, and family-friendly activities. Fan Park is your go-to destination for festival fun."
-          images={fanParkImages}
-          buttonText="View Schedule"
-          buttonLink="#schedule"
           imagePosition="left"
           bgColor="bg-gray-50"
-          useMintButton={true}
         />
 
         {/* MTB Section */}
@@ -323,23 +366,25 @@ export default function Home() {
           title="Conquer the Trails at the MTB Classic and Trail Run"
           description="Challenge yourself on scenic coastal routes suitable for all skill levels. Experience the thrill of mountain biking and trail running amidst Jeffreys Bay's breathtaking landscapes."
           images={mtbImages}
-          buttonText="Visit Event Website"
+          buttonText="More Info"
           buttonLink="https://jbaymtbclassic.org.za/"
           imagePosition="right"
           bgColor="bg-white"
+          posterImage="/images/posters/mtb-trailrun.jpg"
         />
 
         {/* Jiujitsu Section */}
         <EventSection
           id="jiujitsu"
           title="Witness High-Octane Action at the Jiujitsu Tournament"
-          description="Watch skilled martial artists from across South Africa compete in dynamic Brazilian Jiujitsu matches, showcasing technique, strength, and sportsmanship."
+          description="Step into the arena of raw skill and fierce competition at the JBay Jiu Jitsu Takedown 2025 — where grapplers from across the country go head-to-head under the ADCC ruleset. Hosted by The Pound BJJ (Cape St Francis), this electrifying event is one of South Africa's most anticipated grappling showdowns, with R100,000 in prize money up for grabs."
           images={jiujitsuImages}
-          buttonText="Tournament Info"
-          buttonLink="#jiujitsu-info"
+          buttonText="More Info"
+          buttonLink="https://smoothcomp.com"
           imagePosition="left"
           bgColor="bg-gray-50"
           useMintButton={true}
+          posterImage="/images/posters/jiu.jpg"
         />
 
         {/* Funduro Section */}
@@ -348,9 +393,10 @@ export default function Home() {
           title="Embark on an Off-Road Adventure with Funduro"
           description="Join Slake Adventures at Papiesfontein for a family-friendly off-road motorbike event featuring Kiddies, Intermediate, and Pro loops. Enjoy scenic views, a 20km Core Loop, and thrilling Flat Track action with top SA riders showing off their skills. Fun for all ages!"
           images={funduroImages}
-          buttonText="Visit Slake Adventures"
+          buttonText="More Info"
           buttonLink="http://www.slakeadventures.com/"
           imagePosition="right"
+          posterImage="/images/posters/funduro.jpeg"
           bgColor="bg-white"
         />
 
@@ -358,13 +404,42 @@ export default function Home() {
         <EventSection
           id="fishing"
           title="Cast Your Line at the Annual Fishing Competition"
-          description="Test your angling skills with the Jbay Skins Fishing Competition. Compete for prizes and bragging rights in Jeffreys Bay's rich fishing waters."
+          description="Celebrate a decade of fishing skins at the Winter Skins Fishing Competition 2025 — one of Jeffreys Bay's most anticipated angling events! This catch-and-release tournament promises fantastic hourly prizes, a vibrant community vibe, and something for everyone — from serious anglers to junior fishers."
           images={fishingImages}
-          buttonText="Fishing Website"
+          buttonText="More Info"
           buttonLink="https://www.facebook.com/winterfestskins/"
           imagePosition="left"
           bgColor="bg-gray-50"
           useMintButton={true}
+          posterImage="/images/posters/skins.png"
+        />
+
+        {/* Touch Rugby & Volleyball Showdown Section */}
+        <EventSection
+          id="touchies"
+          title="Touch Rugby & Volleyball Showdown"
+          description="Get ready for a day of action-packed fun at the Touch Rugby & Volleyball Showdown – a crowd-favorite event at the JBay Surf Fest! Join us on the golden sands of Main Beach for a high-energy tournament where local legends and visiting athletes battle it out in the sun."
+          images={touchImages}
+          buttonText="More Info"
+          buttonLink="https://www.facebook.com/touchiesjbay/"
+          imagePosition="right"
+          bgColor="bg-white"
+          useMintButton={true}
+          posterImage="/images/posters/touchies-jbay.jpg"
+        />
+
+        {/* Oakley X Over Section */}
+        <EventSection
+          id="x-over"
+          title="Oakley X Over Presented by Betify"
+          description="Watch your favorite sports heroes swap stadiums for surfboards and fairways in the thrilling Oakley X Over, presented by Betify. This unique crossover challenge brings together elite athletes for two adrenaline-fueled days of surfing at Lower Point and golf at the prestigious St Francis Links."
+          images={xOverImages}
+          buttonText="More Info"
+          buttonLink="https://www.instagram.com/jbaysurffestival/p/DJqeiXPMzid/"
+          imagePosition="left"
+          bgColor="bg-gray-50"
+          useMintButton={true}
+          posterImage="/images/posters/oakley-x-over.jpg"
         />
 
         {/* Sponsors Ticker */}
