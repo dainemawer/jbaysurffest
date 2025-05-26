@@ -98,7 +98,7 @@ export function EventSection({
     <section id={id} className={`${videoBackground ? '' : 'py-16 md:py-24'} ${bgColor} content-visibility-auto`} ref={elementRef}>
       {videoBackground ? (
         <motion.div
-          className="relative min-h-[80vh] flex items-center justify-center overflow-hidden"
+          className="relative min-h-[80vh] flex items-center overflow-hidden"
           initial="hidden"
           animate={isIntersecting ? "visible" : "hidden"}
           variants={staggerChildren}
@@ -119,8 +119,26 @@ export function EventSection({
 
           {/* Content */}
           <div className="container max-w-7xl mx-auto px-4 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <motion.div className="space-y-6" variants={fadeInUp}>
+            <div className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-start ${videoBackground ? 'pt-16' : ''}`}>
+              {/* Poster Column */}
+              <motion.div className="md:col-span-5" variants={fadeInUp}>
+                <AspectRatio ratio={394/526}>
+                  <div className="relative w-full h-full overflow-visible rounded-xl">
+                    <Image
+                      src={posterImage || "/placeholder.svg"}
+                      alt={`${title} poster`}
+                      width={394}
+                      height={526}
+                      sizes="(max-width: 768px) 100vw, 394px"
+                      className="object-cover rounded-xl"
+                      priority
+                    />
+                  </div>
+                </AspectRatio>
+              </motion.div>
+
+              {/* Text Column */}
+              <motion.div className="md:col-span-7 space-y-6" variants={fadeInUp}>
                 {logoSrc && (
                   <motion.div variants={fadeInUp}>
                     <Image
@@ -128,19 +146,19 @@ export function EventSection({
                       alt={logoAlt || title}
                       width={120}
                       height={40}
-                      className="h-10 w-auto object-contain mx-auto invert"
+                      className="h-10 w-auto object-contain invert"
                       loading="lazy"
                     />
                   </motion.div>
                 )}
                 <motion.h2
-                  className="text-6xl md:text-7xl font-heading tracking-tight text-white max-w-2xl mx-auto"
+                  className="text-6xl md:text-7xl font-heading tracking-tight text-white"
                   variants={fadeInUp}
                 >
                   {title}
                 </motion.h2>
                 <motion.p
-                  className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto"
+                  className="text-lg md:text-xl text-white/90"
                   variants={fadeInUp}
                 >
                   {description}

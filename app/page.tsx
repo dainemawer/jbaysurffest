@@ -272,7 +272,7 @@ export default function Home() {
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           {/* Video Background */}
           <VideoBackground
-            videoSrc="/images/surfing-background.mp4"
+            videoSrc="/images/new-surf-bg.mp4"
             posterSrc="/images/hero-poster.jpg"
           />
 
@@ -341,9 +341,10 @@ export default function Home() {
           logoSrc="/images/parkoff-logo.png"
           logoAlt="Park Off"
           buttonText="Buy Tickets"
-          buttonLink="#tickets"
+          buttonLink="https://airdosh.co.za/"
           imagePosition="left"
           bgColor="bg-gray-50"
+          posterImage="/images/posters/parkoff.jpg"
           useMintButton={true}
           videoBackground="/images/video-background.mp4"
         />
@@ -357,6 +358,7 @@ export default function Home() {
           buttonText="Buy Tickets"
           buttonLink="#tickets"
           imagePosition="left"
+          posterImage="/images/posters/comedy.jpg"
           bgColor="bg-gray-50"
         />
 
