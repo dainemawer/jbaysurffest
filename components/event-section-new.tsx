@@ -40,8 +40,8 @@ export function EventSection({
   videoBackground,
 }: EventSectionProps) {
   const { elementRef, isIntersecting } = useIntersectionObserver({
-    threshold: 0.5,
-    rootMargin: "0px",
+    threshold: 0.1,
+    rootMargin: "-100px",
   })
 
   // Handle ticket button clicks
@@ -57,22 +57,24 @@ export function EventSection({
   }
 
   const fadeInUp = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
+        duration: 0.6,
         ease: [0.22, 1, 0.36, 1]
       }
     },
   }
 
   const staggerChildren = {
+    hidden: { opacity: 0 },
     visible: {
+      opacity: 1,
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.2
+        staggerChildren: 0.1,
+        delayChildren: 0.1
       },
     },
   }
@@ -80,15 +82,15 @@ export function EventSection({
   const imageGridItem = {
     hidden: {
       opacity: 0,
-      y: 20,
-      scale: 0.95
+      y: 10,
+      scale: 0.98
     },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
-        duration: 0.6,
+        duration: 0.4,
         ease: [0.22, 1, 0.36, 1]
       }
     },
@@ -140,7 +142,7 @@ export function EventSection({
               {/* Text Column */}
               <motion.div className="md:col-span-7 space-y-6" variants={fadeInUp}>
                 {logoSrc && (
-                  <motion.div variants={fadeInUp}>
+                  <motion.div variants={fadeInUp} className="mt-8 md:mt-0">
                     <Image
                       src={logoSrc}
                       alt={logoAlt || title}
@@ -166,7 +168,7 @@ export function EventSection({
                 <motion.div variants={fadeInUp}>
                   <a
                     href={buttonLink}
-                    className="inline-flex text-lg h-14 items-center justify-center rounded-full bg-white text-black hover:bg-white/90 transition-colors shadow-md hover:scale-105 active:scale-95 px-8"
+                    className="inline-flex text-lg h-14 items-center justify-center rounded-full bg-white text-black hover:bg-white/90 transition-colors shadow-md hover:scale-105 active:scale-95 px-8 mb-16 md:mb-0"
                     aria-label={buttonText}
                   >
                     <div className="flex gap-2 items-center">
@@ -202,11 +204,11 @@ export function EventSection({
           >
             {/* Content Column */}
             <motion.div
-              className={`md:col-span-8 flex flex-col h-full ${bgColor !== 'bg-white' ? 'order-1' : 'order-2'}`}
+              className={`md:col-span-8 flex flex-col h-full order-2 ${imagePosition === 'right' ? 'md:order-2' : 'md:order-1'}`}
               variants={fadeInUp}
             >
               {/* Header Content */}
-              <motion.div className="space-y-2 max-w-3xl" variants={fadeInUp}>
+              <motion.div className="space-y-2 max-w-3xl mt-8 md:mt-0" variants={fadeInUp}>
                 {logoSrc && (
                   <motion.div variants={fadeInUp}>
                     <Image
@@ -268,7 +270,7 @@ export function EventSection({
 
             {/* Poster Column */}
             <motion.div
-              className={`md:col-span-4 ${bgColor !== 'bg-white' ? 'order-2' : 'order-1'} relative`}
+              className={`md:col-span-4 order-1 ${imagePosition === 'right' ? 'md:order-1' : 'md:order-2'} relative`}
               variants={fadeInUp}
             >
               <AspectRatio ratio={3/4}>
