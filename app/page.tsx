@@ -306,12 +306,13 @@ export default function Home() {
                 className="flex flex-col sm:flex-row gap-4"
                 variants={fadeInUp}
               >
-                <Link
-                  href="#schedule"
+                <a
+                  href="/schedule.pdf"
+                  target="_blank"
                   className="inline-flex text-2xl h-14 items-center justify-center rounded-md border-2 border-white bg-white/10 backdrop-blur-sm px-8 py-4 font-heading text-white shadow-sm transition-colors hover:bg-white/20"
                 >
                   View Schedule
-                </Link>
+                </a>
               </motion.div>
             </motion.div>
           </div>
