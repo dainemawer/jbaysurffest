@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import { subscribeToMailchimp } from "@/lib/mailchimp"
+import { subscribeToNewsletter } from "@/lib/resend"
 
 export async function POST(request: Request) {
   try {
@@ -22,8 +22,8 @@ export async function POST(request: Request) {
       )
     }
 
-    // Subscribe to Mailchimp
-    await subscribeToMailchimp(email, name)
+    // Subscribe to newsletter
+    await subscribeToNewsletter(email, name)
 
     return NextResponse.json(
       { message: "Subscription successful" },
@@ -32,7 +32,7 @@ export async function POST(request: Request) {
   } catch (error: any) {
     console.error("Newsletter subscription error:", error)
 
-    // Handle specific Mailchimp errors
+    // Handle specific Resend errors
     if (error.message.includes("already exists")) {
       return NextResponse.json(
         { message: "You're already subscribed!" },
