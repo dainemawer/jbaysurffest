@@ -13,7 +13,8 @@ import { SponsorsTicker } from "@/components/sponsors-ticker"
 import { FaqSection } from "@/components/faq-section"
 import { ContactForm } from "@/components/contact-form"
 import { TicketsModal } from "@/components/tickets-modal"
-import { VideoBackground } from "@/components/video-background"
+import { HeroCarousel } from "@/components/hero-carousel"
+import { NewsletterForm } from "@/components/newsletter-form"
 import { motion } from "framer-motion"
 
 export default function Home() {
@@ -161,6 +162,19 @@ export default function Home() {
     "/images/funduro/funduro-10.jpg",
   ]
 
+  const fanParkImages = [
+    "/images/fanpark/fanpark-1.jpg",
+    "/images/fanpark/fanpark-2.jpg",
+    "/images/fanpark/fanpark-3.jpg",
+    "/images/fanpark/fanpark-4.jpg",
+    "/images/fanpark/fanpark-5.jpg",
+    "/images/fanpark/fanpark-6.jpg",
+    "/images/fanpark/fanpark-7.jpg",
+    "/images/fanpark/fanpark-8.jpg",
+    "/images/fanpark/fanpark-9.jpg",
+    "/images/fanpark/fanpark-10.jpg",
+  ]
+
   const fishingImages = [
     "/images/fishing/fishing-1.jpg",
     "/images/fishing/fishing-2.jpg",
@@ -222,7 +236,7 @@ export default function Home() {
             />
           </Link>
           <div className="flex flex-row gap-8">
-            <nav className="hidden lg:mt-1 lg:flex items-center space-x-6">
+            <nav className="hidden lg:mt-1 lg:flex items-center space-x-4">
               <Link href="#wsl" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
                 WSL Tour
               </Link>
@@ -253,6 +267,13 @@ export default function Home() {
               <Link href="#x-over" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
                 X-Over
               </Link>
+              <a
+                href="/surf-fest-schedule.pdf"
+                target="_blank"
+                className="inline-flex text-lg h-10 items-center justify-center rounded-md border-2 border-white bg-white/10 backdrop-blur-sm px-4 font-heading text-white shadow-sm transition-colors hover:bg-white/20 [.sticky_&]:border-black [.sticky_&]:text-black [.sticky_&]:hover:bg-black/10"
+              >
+                View Schedule
+              </a>
             </nav>
             <div className="flex items-center space-x-4">
               <button
@@ -270,11 +291,8 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
-          {/* Video Background */}
-          <VideoBackground
-            videoSrc="/images/new-surf-bg.mp4"
-            posterSrc="/images/hero-poster.jpg"
-          />
+          {/* Background Carousel */}
+          <HeroCarousel />
 
           {/* Content */}
           <div className="container max-w-7xl mx-auto px-4 relative z-10 pt-16">
@@ -285,34 +303,22 @@ export default function Home() {
               variants={staggerContainer}
             >
               <motion.h1
-                className="text-6xl md:text-8xl font-heading text-white mb-6 drop-shadow-lg leading-tight"
+                className="text-6xl md:text-8xl mb-8 font-heading text-white drop-shadow-lg leading-tight"
                 variants={fadeInUp}
               >
-                Ride the Wave of Adventure
+                <Image className="-rotate-2" src="/images/surf-fest-logo.png" alt="Jeffreys Bay Surf Festival" width={600} height={500} />
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-white mb-8 max-w-2xl drop-shadow-md"
                 variants={fadeInUp}
               >
-                Join us from July 11–20, 2025, at Supertubes Beach, Jeffreys Bay, for South Africa's premier surf, music, and adventure festival.
+                Join South Africas largest sport and music festival from July 11–20, 2025, at Supertubes Beach, Jeffreys Bay.
               </motion.p>
               <motion.div
                 className="mb-8"
                 variants={fadeInUp}
               >
                 <CountdownTimer targetDate={festivalDate} />
-              </motion.div>
-              <motion.div
-                className="flex flex-col sm:flex-row gap-4"
-                variants={fadeInUp}
-              >
-                <a
-                  href="/schedule.pdf"
-                  target="_blank"
-                  className="inline-flex text-2xl h-14 items-center justify-center rounded-md border-2 border-white bg-white/10 backdrop-blur-sm px-8 py-4 font-heading text-white shadow-sm transition-colors hover:bg-white/20"
-                >
-                  View Schedule
-                </a>
               </motion.div>
             </motion.div>
           </div>
@@ -359,8 +365,21 @@ export default function Home() {
           buttonText="Buy Tickets"
           buttonLink="#tickets"
           imagePosition="left"
-          posterImage="/images/posters/comedy.jpg"
+          posterImage="/images/posters/comedy-takeover.jpg"
           bgColor="bg-gray-50"
+        />
+
+        {/* Fan Park Section */}
+        <EventSection
+          id="fanpark"
+          title="Explore the Heartbeat of the Festival at Fan Park"
+          description="Discover a hub of excitement with food vendors, merchandise stalls, athlete meet-and-greets, live surf broadcasts, and family-friendly activities. Fan Park is your go-to destination for festival fun."
+          images={fanParkImages}
+          buttonText="View Schedule"
+          buttonLink="#schedule"
+          imagePosition="left"
+          bgColor="bg-mint-50"
+          useMintButton={true}
         />
 
         {/* MTB Section */}
@@ -379,7 +398,7 @@ export default function Home() {
         {/* Jiujitsu Section */}
         <EventSection
           id="jiujitsu"
-          title="Witness High-Octane Action at the Jiujitsu Tournament"
+          title="South Africa's Largest and Richest Jiu Jitsu Event"
           description="Step into the arena of raw skill and fierce competition at the JBay Jiu Jitsu Takedown 2025 — where grapplers from across the country go head-to-head under the ADCC ruleset. Hosted by The Pound BJJ (Cape St Francis), this electrifying event is one of South Africa's most anticipated grappling showdowns, with R100,000 in prize money up for grabs."
           images={jiujitsuImages}
           buttonText="More Info"
@@ -447,6 +466,19 @@ export default function Home() {
 
         {/* Sponsors Ticker */}
         <SponsorsTicker />
+
+        {/* Newsletter Section */}
+        <section className="py-16 md:py-24 bg-mint-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl space-y-4 text-center mx-auto">
+              <h2 className="text-5xl md:text-6xl font-heading text-gray-900 mb-6">Stay Updated</h2>
+              <p className="text-xl md:text-2xl text-gray-600 mb-12">
+                Subscribe to our newsletter for the latest updates, event announcements, and exclusive offers.
+              </p>
+              <NewsletterForm />
+            </div>
+          </div>
+        </section>
 
         {/* FAQ Section */}
         <FaqSection />
