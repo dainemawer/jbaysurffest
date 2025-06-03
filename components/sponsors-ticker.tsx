@@ -27,6 +27,7 @@ export function SponsorsTicker() {
     { name: "Stance", logo: "/images/sponsors/stance.jpg" },
     { name: "Surfline", logo: "/images/sponsors/surfline.jpg" },
     { name: "Yeti", logo: "/images/sponsors/yeti.jpg" },
+    { name: "EZ Massager", logo: "/images/sponsors/ez-massager.jpg" },
   ]
 
   // Duplicate sponsors for continuous scrolling
