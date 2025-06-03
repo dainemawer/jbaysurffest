@@ -1,12 +1,8 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 
 export function SponsorsTicker() {
-  const scrollRef = useRef<HTMLDivElement>(null)
-  const [isVisible, setIsVisible] = useState(false)
-
   // Sample sponsor logos (using placeholders)
   const sponsors = [
     { name: "Corona Cero", logo: "/images/sponsors/corona.jpg" },
@@ -27,60 +23,34 @@ export function SponsorsTicker() {
     { name: "Stance", logo: "/images/sponsors/stance.jpg" },
     { name: "Surfline", logo: "/images/sponsors/surfline.jpg" },
     { name: "Yeti", logo: "/images/sponsors/yeti.jpg" },
-    { name: "EZ Massager", logo: "/images/sponsors/ez-massager.jpg" },
+    { name: "EZ Massager", logo: "/images/sponsors/ezmassager.jpg" },
+    { name: "AlgoaFM", logo: "/images/sponsors/algoa.jpg" },
+    { name: "Exec Ops", logo: "/images/sponsors/exec-ops.jpg" },
+    { name: "Fitch & Leeds", logo: "/images/sponsors/fitch.jpg" },
+    { name: "RVCA", logo: "/images/sponsors/rvca.jpg" },
+    { name: "SSG", logo: "/images/sponsors/ssg.jpg" }
   ]
-
-  // Duplicate sponsors for continuous scrolling
-  const allSponsors = [...sponsors, ...sponsors]
-
-  // Intersection Observer to start animation when visible
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 },
-    )
-
-    if (scrollRef.current) {
-      observer.observe(scrollRef.current)
-    }
-
-    return () => {
-      if (scrollRef.current) {
-        observer.unobserve(scrollRef.current)
-      }
-    }
-  }, [])
 
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl md:text-6xl font-heading text-center text-gray-900 mb-8">Proudly Supported by Our Valued Sponsors</h2>
-        <div className="relative overflow-hidden" ref={scrollRef}>
-          <div
-            className={`flex items-center space-x-12 ${isVisible ? "animate-marquee" : ""}`}
-            style={{
-              animationDuration: "15s",
-              animationIterationCount: "infinite",
-              animationTimingFunction: "linear",
-            }}
-          >
-            {allSponsors.map((sponsor, index) => (
-              <div key={index} className="flex-shrink-0">
-                <Image
-                  src={sponsor.logo || "/placeholder.svg"}
-                  alt={sponsor.name}
-                  width={180}
-                  height={60}
-                  className="h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
+        <h2 className="text-5xl md:text-6xl font-heading text-center text-gray-900 mb-12">Proudly Supported by Our Valued Sponsors</h2>
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-4 md:gap-12 max-w-6xl mx-auto">
+          {sponsors.map((sponsor, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center bg-white rounded-lg hover:scale-105"
+            >
+              <Image
+                src={sponsor.logo || "/placeholder.svg"}
+                alt={sponsor.name}
+                width={150}
+                height={150}
+                className="w-auto object-contain h-40 grayscale hover:grayscale-0 transition-all duration-300"
+                loading="lazy"
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>
