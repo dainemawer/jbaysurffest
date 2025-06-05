@@ -286,6 +286,7 @@ export function EventSection({
                   {buttonText && buttonLink && (
                     <a
                       href={buttonLink}
+                      target="_blank"
                       className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-auto py-4 px-6 h-16 flex items-center justify-center rounded-full bg-black text-white hover:bg-black/90 transition-colors shadow-md hover:scale-105 active:scale-95"
                       aria-label={buttonText}
                     >

@@ -28,7 +28,8 @@ export function SponsorsTicker() {
     { name: "Exec Ops", logo: "/images/sponsors/exec-ops.jpg" },
     { name: "Fitch & Leeds", logo: "/images/sponsors/fitch.jpg" },
     { name: "RVCA", logo: "/images/sponsors/rvca.jpg" },
-    { name: "SSG", logo: "/images/sponsors/ssg.jpg" }
+    { name: "SSG", logo: "/images/sponsors/ssg.jpg" },
+    { name: "My Glass", logo: "/images/sponsors/my-glass.jpg" }
   ]
 
   return (

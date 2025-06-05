@@ -264,9 +264,6 @@ export default function Home() {
               <Link href="#touchies" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
                 Touchies
               </Link>
-              <Link href="#x-over" className="text-white border-b-2 border-b-transparent hover:border-b-[#f18a50] text-lg font-heading tracking-wide transition-all duration-300 [.sticky_&]:text-black">
-                X-Over
-              </Link>
               <a
                 href="/surf-fest-schedule.pdf"
                 target="_blank"
@@ -376,7 +373,8 @@ export default function Home() {
           description="Discover a hub of excitement with food vendors, merchandise stalls, athlete meet-and-greets, live surf broadcasts, and family-friendly activities. Fan Park is your go-to destination for festival fun."
           images={fanParkImages}
           buttonText="View Schedule"
-          buttonLink="#schedule"
+          buttonLink="/jbay-surf-fest-screenings.pdf"
+          posterImage="/images/posters/fanpark.jpg"
           imagePosition="left"
           bgColor="bg-mint-50"
           useMintButton={true}
@@ -448,20 +446,6 @@ export default function Home() {
           bgColor="bg-white"
           useMintButton={true}
           posterImage="/images/posters/touchies-jbay.jpg"
-        />
-
-        {/* Oakley X Over Section */}
-        <EventSection
-          id="x-over"
-          title="Oakley X Over Presented by Betify"
-          description="Watch your favorite sports heroes swap stadiums for surfboards and fairways in the thrilling Oakley X Over, presented by Betify. This unique crossover challenge brings together elite athletes for two adrenaline-fueled days of surfing at Lower Point and golf at the prestigious St Francis Links."
-          images={xOverImages}
-          buttonText="More Info"
-          buttonLink="https://www.instagram.com/jbaysurffestival/p/DJqeiXPMzid/"
-          imagePosition="left"
-          bgColor="bg-gray-50"
-          useMintButton={true}
-          posterImage="/images/posters/oakley-x-over.jpg"
         />
 
         {/* Sponsors Ticker */}
