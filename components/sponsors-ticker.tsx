@@ -8,6 +8,7 @@ export function SponsorsTicker() {
     { name: "Corona Cero", logo: "/images/sponsors/corona.jpg" },
     { name: "Red Bull", logo: "/images/sponsors/redbull.jpg" },
     { name: "Grit", logo: "/images/sponsors/grit.jpg" },
+    { name: "My Glass", logo: "/images/sponsors/my-glass.jpg" },
     { name: "JBay Wind Farm", logo: "/images/sponsors/jbaywindfarm.jpg" },
     { name: "Kouga Municipality", logo: "/images/sponsors/kouga.jpg" },
     { name: "Oakley", logo: "/images/sponsors/oakley.jpg" },
@@ -29,7 +30,6 @@ export function SponsorsTicker() {
     { name: "Fitch & Leeds", logo: "/images/sponsors/fitch.jpg" },
     { name: "RVCA", logo: "/images/sponsors/rvca.jpg" },
     { name: "SSG", logo: "/images/sponsors/ssg.jpg" },
-    { name: "My Glass", logo: "/images/sponsors/my-glass.jpg" }
   ]
 
   return (

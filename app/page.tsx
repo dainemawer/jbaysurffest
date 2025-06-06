@@ -265,7 +265,7 @@ export default function Home() {
                 Touchies
               </Link>
               <a
-                href="/surf-fest-schedule.pdf"
+                href="/jsf-schedule.pdf"
                 target="_blank"
                 className="inline-flex text-lg h-10 items-center justify-center rounded-md border-2 border-white bg-white/10 backdrop-blur-sm px-4 font-heading text-white shadow-sm transition-colors hover:bg-white/20 [.sticky_&]:border-black [.sticky_&]:text-black [.sticky_&]:hover:bg-black/10"
               >
@@ -373,7 +373,7 @@ export default function Home() {
           description="Discover a hub of excitement with food vendors, merchandise stalls, athlete meet-and-greets, live surf broadcasts, and family-friendly activities. Fan Park is your go-to destination for festival fun."
           images={fanParkImages}
           buttonText="View Schedule"
-          buttonLink="/jbay-surf-fest-screenings.pdf"
+          buttonLink="/jsf-screenings.pdf"
           posterImage="/images/posters/fanpark.jpg"
           imagePosition="left"
           bgColor="bg-mint-50"
@@ -506,9 +506,9 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#schedule" className="text-white hover:text-gray-200">
+                  <a target="_blank" href="/jsf-schedule.pdf" className="text-white hover:text-gray-200">
                     Schedule
-                  </Link>
+                  </a>
                 </li>
                 <li>
                   <a href="https://africanperfection.co.za" rel="noopener noreferrer" target="_blank" className="text-white hover:text-gray-200">
