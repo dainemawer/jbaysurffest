@@ -351,6 +351,7 @@ export default function Home() {
           posterImage="/images/posters/parkoff.jpg"
           useMintButton={true}
           videoBackground="/images/video-background.mp4"
+          instagramUrl="https://www.instagram.com/parkoffmusicfestival/"
         />
 
         {/* Comedy Night Section */}
@@ -378,6 +379,7 @@ export default function Home() {
           imagePosition="left"
           bgColor="bg-mint-50"
           useMintButton={true}
+          instagramUrl="https://www.instagram.com/jbaysurffestival/"
         />
 
         {/* MTB Section */}
@@ -405,6 +407,7 @@ export default function Home() {
           bgColor="bg-gray-50"
           useMintButton={true}
           posterImage="/images/posters/jiu.jpg"
+          instagramUrl="https://www.instagram.com/jbayjiujitsutakedown/"
         />
 
         {/* Funduro Section */}

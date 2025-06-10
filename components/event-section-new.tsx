@@ -5,6 +5,7 @@ import Image from "next/image"
 import { AspectRatio } from "./ui/aspect-ratio"
 import { motion } from "framer-motion"
 import { useIntersectionObserver } from "./use-intersection-observer"
+import { Instagram } from "lucide-react"
 
 interface EventSectionProps {
   id: string
@@ -21,6 +22,7 @@ interface EventSectionProps {
   useMintButton?: boolean
   posterImage?: string
   videoBackground?: string
+  instagramUrl?: string
 }
 
 export function EventSection({
@@ -38,6 +40,7 @@ export function EventSection({
   useMintButton = false,
   posterImage,
   videoBackground,
+  instagramUrl,
 }: EventSectionProps) {
   const { elementRef, isIntersecting } = useIntersectionObserver({
     threshold: 0.1,
@@ -190,6 +193,25 @@ export function EventSection({
                     </div>
                   </a>
                 </motion.div>
+
+                {/* Instagram Link for Video Background */}
+                {instagramUrl && (
+                  <motion.div
+                    className="mt-6 flex items-center gap-2 text-white/90 hover:text-white transition-colors"
+                    variants={fadeInUp}
+                  >
+                    <a
+                      href={instagramUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                      aria-label="Follow on Instagram"
+                    >
+                      <Instagram size={20} />
+                      <span className="text-lg font-medium">Follow Us on Instagram</span>
+                    </a>
+                  </motion.div>
+                )}
               </motion.div>
             </div>
           </div>
@@ -266,6 +288,25 @@ export function EventSection({
                   </motion.div>
                 ))}
               </motion.div>
+
+              {/* Instagram Link */}
+              {instagramUrl && (
+                <motion.div
+                  className="mt-6 flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+                  variants={fadeInUp}
+                >
+                  <a
+                    href={instagramUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2"
+                    aria-label="Follow on Instagram"
+                  >
+                    <Instagram size={20} />
+                    <span className="text-lg font-medium">Follow Us on Instagram</span>
+                  </a>
+                </motion.div>
+              )}
             </motion.div>
 
             {/* Poster Column */}
