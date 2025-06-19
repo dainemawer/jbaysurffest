@@ -375,7 +375,7 @@ export default function Home() {
           images={fanParkImages}
           buttonText="View Schedule"
           buttonLink="/jsf-screenings.pdf"
-          posterImage="/images/posters/fanpark.jpg"
+          posterImage="/images/posters/raffle-poster.jpg"
           imagePosition="left"
           bgColor="bg-mint-50"
           useMintButton={true}
